@@ -2,26 +2,8 @@
 
 <!doctype html>
 <html lang="en" class="no-js">
-
     {% include "partials/head/head.njk" %}
-    {% block head %}{% endblock head %}
-
-    <body style="min-height:70vh;">
-
-        {% include "partials/navigation/navigation.njk" %}
-        {% block nav %}{% endblock nav %}
-
-        {% include "header/base.njk" %}
-        {% block header %}{% endblock header %}
-
-        <main id="main-content" tabindex="-1">
-
-            {% block content %}{% endblock content %}
-
-        </main>
-
-        {% include "partials/footer/footer.njk" %}
-        {% block footer %}{% endblock footer%}
-        
+    <body class="M(0)">
+        {% block content %}{% endblock content %}
     </body>
 </html>

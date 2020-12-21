@@ -6,7 +6,7 @@ title: ""
 
 metaDesc: ""
 
-layout: 'layouts/page.njk'
+layout: 'layouts/base.njk'
 
 category: ""
 

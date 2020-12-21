@@ -1,20 +1,20 @@
 ---
 id: '1'
 
-layout: 'layouts/homepage.njk'
+layout: 'pages/homepage/homepage.njk'
 
-metaDesc: "Public & Money"
+metaDesc: "AtomiCSS"
 
-title: "Public & Money"
+title: "AtomiCSS"
 
 description: 'To promote the freedom of humankind through entrepreneurship and the new digital economy'
 
-category: "Public & Money"
+category: "AtomiCSS"
 
 buttonWelcome: "Sign Up"
 
 keywords: 
-    - Public & Money
+    - AtomiCSS
 
 permalink: "/"
 

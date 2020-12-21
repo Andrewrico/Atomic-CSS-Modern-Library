@@ -1,0 +1,724 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root {
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	line-height: 1.6;
+	font-size: 14.5px;
+	--atomic-primary: #6495ED;
+	--atomic-secondary: #8A2BE2;
+	--atomic-tertiary: #8FBC8F;
+	--atomic-orange: #FF6347;
+	--atomic-red: #B22222;
+	--atomic-maroon:#800000;
+	--atomic-yellow: #FFD700;
+	--atomic-lime: #66FF33; 
+	--atomic-green: #009900; 
+	--atomic-cyan:#66FFFF;
+	--atomic-blue: #0099FF ;
+	--atomic-indigo: #330066;
+	--atomic-violet: #EE82EE;
+	--atomic-lavender: #CC00CC;
+	--atomic-purple:#800080;
+	--atomic-pink:#FFC0CB;
+	--atomic-lightgray: #f5f5f5;
+	--atomic-gray: #C0C0C0;
+	--atomic-darkgray:#708090;
+	--atomic-dark: #2e353c;
+	--atomic-light: #f7f7f7;
+	--atomic-white: #ffffff;
+	--atomic-black: #000000;
+	--atomic-transparent: transparent;
+	--atomic-link: #3366CC;
+	--atomic-link-hover: #009df9;
+	--atomic-link-active: #037dc4;
+	--atomic-font-family-primary: 'Space Grotesk', sans-serif;
+	--atomic-font-family-1: Arial,Helvetica,sans-serif;
+	--atomic-font-family-2: Tahoma,Verdana,sans-serif;
+	--atomic-font-family-3: Georgia,serif;
+	--atomic-font-family-4: Garamond,serif;
+	--atomic-font-family-5: "Courier New",Courier,monospace;
+	--atomic-font-family-6: "Brush Script MT",cursive;
+	--atomic-font-family-7: Copperplate,Papyrus,fantasy;
+	--atomic-block: block;
+	--atomic-grid: grid;
+	--atomic-flex: flex;
+	--atomic-inline: inline;
+	--atomic-inline-block: inline-block;
+	--atomic-inline-grid: inline-grid;
+	--atomic-inline-flex: inline-flex;
+	--atomic-nowrap: nowrap;
+	--atomic-wrap: wrap;
+	--atomic-column: column;
+	--atomic-row: row;
+	--atomic-flex-start: flex-start;
+	--atomic-flex-end: flex-end;
+	--atomic-space-around: space-around;
+	--atomic-space-between: space-between;
+	--atomic-baseline: baseline;
+	--atomic-stretch: stretch;
+	--atomic-center: center;
+	--atomic-left: left;
+	--atomic-right: right;
+	--atomic-auto: auto;
+	--atomic-none: none;
+	--atomic-0: 0;
+	--atomic-1: 1;
+	--atomic-2: 2;
+	--atomic-3: 3;
+	--atomic-4: 4;
+	--atomic-5: 5;
+	--atomic-6: 6;
+	--atomic-7: 7;
+	--atomic-8: 8;
+	--atomic-9: 9;
+	--atomic-10: 10;
+	--atomic-11: 11;
+	--atomic-12: 12;
+	--atomic-13: 13;
+	--atomic-14: 14;
+	--atomic-15: 15;
+	--atomic-16: 16;
+	--atomic-17: 17;
+	--atomic-18: 18;
+	--atomic-19: 19;
+	--atomic-20: 20;
+	--atomic-21: 21;
+	--atomic-22: 22;
+	--atomic-23: 23;
+	--atomic-24: 24;
+	--atomic-25: 25;
+	--atomic-26: 26;
+	--atomic-27: 27;
+	--atomic-28: 28;
+	--atomic-29: 29;
+	--atomic-30: 30;
+	--atomic-31: 31;
+	--atomic-32: 32;
+	--atomic-40: 40;
+	--atomic-48: 48;
+	--atomic-56: 56;
+	--atomic-64: 64;
+	--atomic-72: 72;
+	--atomic-84: 84;
+	--atomic-96: 96;
+	--atomic-100: 100;
+	--atomic-200: 200;
+	--atomic-300: 300;
+	--atomic-400: 400;
+	--atomic-500: 500;
+	--atomic-600: 600;
+	--atomic-0-1: 0.1;
+    --atomic-0-2: 0.2;
+    --atomic-0-3: 0.3;
+    --atomic-0-4: 0.4;
+    --atomic-0-5: 0.5;
+    --atomic-0-6: 0.6;
+    --atomic-0-7: 0.7;
+    --atomic-0-8: 0.8;
+	--atomic-0-9: 0.9;
+	--atomic-1-1: 1.1;
+	--atomic-1-2: 1.2;
+	--atomic-1-3: 1.3;
+	--atomic-1-4: 1.4;
+	--atomic-1-5: 1.5;
+	--atomic-1-6: 1.6;
+	--atomic-1-4: 1.4;
+	--atomic-1-6: 1.6;
+	--atomic-1-7: 1.7;
+	--atomic-1-8: 1.8;
+	--atomic-1-9: 1.9;
+	--atomic-2-1: 2.1;
+	--atomic-2-2: 2.2;
+	--atomic-2-3: 2.3;
+	--atomic-2-4: 2.4;
+	--atomic-2-5: 2.5;
+	--atomic-2-6: 2.6;
+	--atomic-2-4: 2.4;
+	--atomic-2-6: 2.6;
+	--atomic-2-7: 2.7;
+	--atomic-2-8: 2.8;
+	--atomic-2-9: 2.9;
+	--atomic-05px: 0.5px;
+	--atomic-1px: 1px;
+	--atomic-2px: 2px;
+	--atomic-3px: 3px;
+	--atomic-4px: 4px;
+	--atomic-5px: 5px;
+	--atomic-6px: 6px;
+	--atomic-7px: 7px;
+	--atomic-8px: 8px;
+	--atomic-9px: 9px;
+	--atomic-10px: 10px;
+	--atomic-11px: 11px;
+	--atomic-12px: 12px;
+	--atomic-13px: 13px;
+	--atomic-14px: 14px;
+	--atomic-15px: 15px;
+	--atomic-16px: 16px;
+	--atomic-17px: 17px;
+	--atomic-18px: 18px;
+	--atomic-19px: 19px;
+	--atomic-20px: 20px;
+	--atomic-21px: 21px;
+	--atomic-22px: 22px;
+	--atomic-23px: 23px;
+	--atomic-24px: 24px;
+	--atomic-25px: 25px;
+	--atomic-26px: 26px;
+	--atomic-27px: 27px;
+	--atomic-28px: 28px;
+	--atomic-29px: 29px;
+	--atomic-30px: 30px;
+	--atomic-31px: 31px;
+	--atomic-32px: 32px;
+	--atomic-48px: 48px;
+	--atomic-56px: 56px;
+	--atomic-64px: 64px;
+	--atomic-72px: 72px;
+	--atomic-84px: 84px;
+	--atomic-90px: 90px;
+	--atomic-96px: 96px;
+	--atomic-100px: 100px;
+	--atomic-150px: 150px;
+	--atomic-200px: 200px;
+	--atomic-250px: 250px;
+	--atomic-300px: 300px;
+	--atomic-350px: 350px;
+	--atomic-400px: 400px;
+	--atomic-450px: 450px;
+	--atomic-499px: 499px;
+	--atomic-768px: 768px;
+	--atomic-1024px: 1024px;
+	--atomic-1268px: 1268px;
+	--atomic-1366px: 1366px;
+	--atomic-1rem: 1rem;
+	--atomic-2rem: 2rem;
+	--atomic-3rem: 3rem;
+	--atomic-4rem: 4rem;
+	--atomic-5rem: 5rem;
+	--atomic-6rem: 6rem;
+	--atomic-7rem: 7rem;
+	--atomic-8rem: 8rem;
+	--atomic-9rem: 9rem;
+	--atomic-10rem: 10rem;
+	--atomic-0pct: 0%;
+	--atomic-10pct: 10%;
+	--atomic-20pct: 20%;
+	--atomic-30pct: 30%;
+	--atomic-40pct: 40%;
+	--atomic-50pct: 50%;
+	--atomic-60pct: 60%;
+	--atomic-70pct: 70%;
+	--atomic-80pct: 80%;
+	--atomic-90pct: 90%;
+	--atomic-100pct: 100%;
+	--atomic-100vh: 100vh;
+	--atomic-solid: solid;
+	--atomic-dotted: dotted;
+	--atomic-double: double;
+    --atomic-cover: cover;
+    --atomic-contain: contain;
+	--atomic-pointer: pointer;
+	--atomic-all : all;
+	--atomic-ease-in-out: ease-in-out;
+	--atomic-15-s:.15s;
+	--atomic-solid-05px: var(--atomic-solid) var(--atomic-05px);
+	--atomic-solid-1px: var(--atomic-solid) var(--atomic-1px);
+	--atomic-box-shadow-1: 0 1px 3px rgba(0, 0, 0, 0.12), 
+	0 1px 2px rgba(235, 235, 235, 0.24);
+	--atomic-box-shadow-2: 0 10px 20px rgba(0, 0, 0, 0.19), 
+	0 6px 6px rgba(0, 0, 0, 0.23);
+	--atomic-box-shadow-3: 0 3px 6px rgba(0, 0, 0, 0.16), 
+	0 3px 6px rgba(0, 0, 0, 0.23);
+	--atomic-box-shadow-4: 0px 0px 3px 1px rgba(0, 0, 21103119860, 0.4);
+	--atomic-box-shadow-5: 0px 0px 16px 8px rgba(0, 0, 0, 0.16);
+	--atomic-box-shadow-6: 0px 5px 64px -32px rgba(0, 0, 0, 0.397);
+	--atomic-box-shadow-7: rgba(0, 0, 0, 0.448) 0px 3px 6px, 
+	rgba(0, 0, 0, 0.496) 0px 6px 12px;
+	--atomic-box-shadow-8: -4px 0px 9px 3px rgba(215, 223, 34, 0.63);
+	--atomic-box-shadow-9: 1rem 3rem rgba(0,0,0,.175);
+	--atomic-box-shadow-10:0 2px 2px 0 rgba(0,0,0,0.14), 
+	0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+	font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+pre span {
+	-webkit-user-select: var(--atomic-none);
+	-moz-user-select: var(--atomic-none);
+	user-select: var(--atomic-none);
+}
+summary { 
+	cursor: pointer;
+	padding: 3rem 0;
+	border-bottom: 1px solid rgb(215, 215, 215);
+}
+details[open] summary ~ * {
+	animation: open .5s ease-in-out;}
+	@keyframes open {
+	0% {opacity: 0; margin-left: -20px}
+	100% {opacity: 1; margin-left: 0px}
+}
+
+[class*="Bt"] {
+	display: var(--atomic-inline-block);
+	color: var(--atomic-dark);
+	text-decoration: var(--atomic-none);
+	cursor: var(--atomic-pointer);
+	-webkit-user-select: var(--atomic-none);
+	-moz-user-select: var(--atomic-none);
+	user-select: var(--atomic-none);
+	background-color: var(--atomic-transparent);
+	border: var(--atomic-solid-1px) var(--atomic-transparent);
+	padding: var(--atomic-8px);
+	border-radius: var(--atomic-4px);
+	background-color: var(--atomic-background-color);
+	color: var(--atomic-white);
+	transition: var(--atomic-all) var(--atomic-ease-in-out) var(--atomic-15-s);
+} 
+
+.I\(c\) {
+	display: var(--atomic-grid);
+	place-items: var(--atomic-center);
+	justify-content: var(--atomic-center);
+	align-items: var(--atomic-center);
+	text-align: var(--atomic-center);
+	margin: var(--atomic-auto);
+} 
+
+.F\(c\) {
+	display: var(--atomic-flex);
+	justify-content: var(--atomic-center);
+	align-items: var(--atomic-center);
+} 
+.F\(cw\) {
+	display: var(--atomic-flex);
+	justify-content: var(--atomic-center);
+	align-items: var(--atomic-center);
+	flex-wrap: var(--atomic-wrap);
+} 
+
+.F\(sb\) {
+	display: var(--atomic-flex);
+	justify-content: var(--atomic-space-between);
+	align-items: var(--atomic-center);
+} 
+.F\(sa\) {
+	display: var(--atomic-flex);
+	justify-content: var(--atomic-space-around);
+	align-items: var(--atomic-center);
+} 
+
+.G\(c\)  {
+	display: var(--atomic-grid);
+	place-items: var(--atomic-center);
+} 
+
+
+.F\(row\) {
+	display: var(--atomic-flex);
+	flex-direction: var(--atomic-column);
+	flex-wrap: var(--atomic-wrap);
+	width: var(--atomic-100pct) }
+	@media (min-width: 1024px) { 
+		.F\(row\) { flex-direction: var(--atomic-row) } 
+}
+
+.F\(column\),
+.F\(colspan\) {
+	padding:var(--atomic-0) var(--atomic-1rem);
+	display: var(--atomic-flex);
+	flex-direction: var(--atomic-column);
+	flex-basis: var(--atomic-100pct);
+	flex: var(--atomic-1) }
+	.F\(colspan\) { 
+		flex:var(--atomic-2) 
+ }
+
+[class*="Hr("]  { 
+	margin-top: 64px;
+	margin-bottom: 64px;
+	border: 2px solid transparent;
+	border-image: url(/images/hr.svg) 30 stretch;
+ } 
+	.Hr\(orange\)       { --atomic-border: var(--atomic-solid-05px) var(--atomic-orange) }
+	.Hr\(blue\)         { --atomic-border: var(--atomic-solid-05px) var(--atomic-blue) }
+	.Hr\(green\)        { --atomic-border: var(--atomic-solid-05px) var(--atomic-green) }
+	.Hr\(lightgray\)    { --atomic-border: var(--atomic-solid-05px) var(--atomic-lightgray) }
+	.Hr\(gray\)         { --atomic-border: var(--atomic-solid-05px) var(--atomic-gray) }
+	.Hr\(light\)        { --atomic-border: var(--atomic-solid-05px) var(--atomic-light) }
+	.Hr\(black\)        { --atomic-border: var(--atomic-solid-05px) var(--atomic-black) }
+	.Hr\(white\)        { --atomic-border: var(--atomic-solid-05px) var(--atomic-white) }
+	
+[class*="Ai("]          { align-items: var(--atomic-align-items) }
+	.Ai\(fs\)           { --atomic-align-items: var(--atomic-flex-start) }
+	.Ai\(fe\)           { --atomic-align-items: var(--atomic-flex-end) }
+	.Ai\(bs\)           { --atomic-align-items: var(--atomic-baseline) }
+	.Ai\(st\)           { --atomic-align-items: var(--atomic-stretch) }
+	.Ai\(c\)            { --atomic-align-items: var(--atomic-center) }
+
+[class*="Bd("]		    { border: var(--atomic-border) }
+	.Bd\(black\) 		{ --atomic-border: var(--atomic-solid-1px) var(--atomic-black) }
+	.Bd\(white\) 		{ --atomic-border: var(--atomic-solid-1px) var(--atomic-white) }
+	.Bd\(gray\) 	    { --atomic-border: var(--atomic-solid-1px) var(--atomic-gray) }
+	.Bd\(lightgray\) 	{ --atomic-border: var(--atomic-solid-1px) var(--atomic-lightgray) }
+	.Bd\(darkgray\) 	{ --atomic-border: var(--atomic-solid-1px) var(--atomic-darkgray) }
+	.Bd\(light\) 		{ --atomic-border: var(--atomic-solid-1px) var(--atomic-light) }
+	.Bd\(dark\) 		{ --atomic-border: var(--atomic-solid-1px) var(--atomic-dark) }
+	.Bd\(primary\) 		{ --atomic-border: var(--atomic-solid-1px) var(--atomic-primary) }
+	.Bd\(secondary\) 	{ --atomic-border: var(--atomic-solid-1px) var(--atomic-secondary) }
+	.Bd\(tertiary\) 	{ --atomic-border: var(--atomic-solid-1px) var(--atomic-tertiary) }
+
+
+[class*="Bg("]			{ background-color: var(--atomic-background-color) }
+	.Bg\(primary\)      { --atomic-background-color: var(--atomic-primary) }
+	.Bg\(secondary\)    { --atomic-background-color: var(--atomic-secondary) }
+	.Bg\(tertiary\)     { --atomic-background-color: var(--atomic-tertiary) }
+	.Bg\(orange\)       { --atomic-background-color: var(--atomic-orange) }
+	.Bg\(red\)          { --atomic-background-color: var(--atomic-red) }
+	.Bg\(maroon\)       { --atomic-background-color: var(--atomic-maroon) }
+	.Bg\(yellow\)       { --atomic-background-color: var(--atomic-yellow) }
+	.Bg\(lime\)         { --atomic-background-color: var(--atomic-lime) }
+	.Bg\(green\)        { --atomic-background-color: var(--atomic-green) }
+	.Bg\(cyan\)         { --atomic-background-color: var(--atomic-cyan) }
+	.Bg\(blue\)         { --atomic-background-color: var(--atomic-blue) }
+	.Bg\(indigo\)       { --atomic-background-color: var(--atomic-indigo) }	
+	.Bg\(lavender\)     { --atomic-background-color: var(--atomic-lavender) }	
+	.Bg\(violet\)       { --atomic-background-color: var(--atomic-violet) }
+	.Bg\(purple\)       { --atomic-background-color: var(--atomic-purple) }
+	.Bg\(pink\)         { --atomic-background-color: var(--atomic-pink) }
+	.Bg\(dark\)         { --atomic-background-color: var(--atomic-dark) }
+	.Bg\(light\)        { --atomic-background-color: var(--atomic-light) }
+	.Bg\(darkgray\)     { --atomic-background-color: var(--atomic-darkgray) }
+	.Bg\(gray\)         { --atomic-background-color: var(--atomic-gray) }
+	.Bg\(lightgray\)    { --atomic-background-color: var(--atomic-lightgray) }
+	.Bg\(black\)        { --atomic-background-color: var(--atomic-black) }
+	.Bg\(white\)        { --atomic-background-color: var(--atomic-white) }
+
+	.Bg\(secondary\)\:hv:hover  { --atomic-background-color: var(--atomic-secondary) }
+
+
+
+[class*="Bs("] 			{ box-shadow: var(--atomic-box-shadow) }
+	.Bs\(1\)  			{ --atomic-box-shadow: var(--atomic-box-shadow-1) }
+	.Bs\(2\)  			{ --atomic-box-shadow: var(--atomic-box-shadow-2) }
+	.Bs\(3\)  			{ --atomic-box-shadow: var(--atomic-box-shadow-3) }
+	.Bs\(4\)  			{ --atomic-box-shadow: var(--atomic-box-shadow-4) }
+	.Bs\(5\)  			{ --atomic-box-shadow: var(--atomic-box-shadow-5) }
+	.Bs\(6\)  			{ --atomic-box-shadow: var(--atomic-box-shadow-6) }
+	.Bs\(7\)  			{ --atomic-box-shadow: var(--atomic-box-shadow-7) }
+	.Bs\(8\)  			{ --atomic-box-shadow: var(--atomic-box-shadow-8) }
+	.Bs\(9\)  			{ --atomic-box-shadow: var(--atomic-box-shadow-9) }
+
+[class*="C("]			{ color: var(--atomic-color) }
+	.C\(secondary\)    { --atomic-color: var(--atomic-secondary) }
+	.C\(tertiary\)     { --atomic-color: var(--atomic-tertiary) }
+	.C\(orange\)       { --atomic-color: var(--atomic-orange) }
+	.C\(red\)          { --atomic-color: var(--atomic-red) }
+	.C\(maroon\)       { --atomic-color: var(--atomic-maroon) }
+	.C\(yellow\)       { --atomic-color: var(--atomic-yellow) }
+	.C\(lime\)         { --atomic-color: var(--atomic-lime) }
+	.C\(green\)        { --atomic-color: var(--atomic-green) }
+	.C\(cyan\)         { --atomic-color: var(--atomic-cyan) }
+	.C\(blue\)         { --atomic-color: var(--atomic-blue) }
+	.C\(indigo\)       { --atomic-color: var(--atomic-indigo) }
+	.C\(lavender\)     { --atomic-color: var(--atomic-lavender) }	
+	.C\(violet\)       { --atomic-color: var(--atomic-violet) }
+	.C\(purple\)       { --atomic-color: var(--atomic-purple) }
+	.C\(pink\)         { --atomic-color: var(--atomic-pink) }
+	.C\(dark\)         { --atomic-color: var(--atomic-dark) }
+	.C\(light\)        { --atomic-color: var(--atomic-light) }
+	.C\(lightgray\)    { --atomic-color: var(--atomic-lightgray) }
+	.C\(gray\)         { --atomic-color: var(--atomic-gray) }
+	.C\(darkgray\)     { --atomic-color: var(--atomic-darkgray) }
+	.C\(black\)        { --atomic-color: var(--atomic-black) }
+	.C\(white\)        { --atomic-color: var(--atomic-white) }
+
+[class*="D("]			{ display: var(--atomic-display) }
+	.D\(inline\) 		{ --atomic-display: var(--atomic-inline) }
+	.D\(iflex\) 		{ --atomic-display: var(--atomic-iflex) }
+	.D\(iblock\) 		{ --atomic-display: var(--atomic-iblock) }
+	.D\(igrid\) 		{ --atomic-display: var(--atomic-igrid) }
+	.D\(flex\) 			{ --atomic-display: var(--atomic-flex) }
+	.D\(block\) 		{ --atomic-display: var(--atomic-block) }
+	.D\(grid\) 			{ --atomic-display: var(--atomic-grid) }
+
+[class*="Fwr("]			{ flex-wrap: var(--atomic-flex-wrap) }
+	.Fwr\(nowrap\) 		{ --atomic-flex-wrap: var(--atomic-nowrap) }
+	.Fwr\(wrap\) 		{ --atomic-flex-wrap: var(--atomic-wrap) }
+
+[class*="Fd("]		    { flex-direction: var(--atomic-flex-direction) }
+	.Fd\(col\) 		    { --atomic-flex-direction:var(--atomic-column) }
+	.Fd\(row\) 		    { --atomic-flex-direction:var(--atomic-row) }
+
+[class*="Ff("] 			{ font-family: var(--atomic-font-family) }
+	.Ff\(primary\) 	 		{ --atomic-font-family: var(--atomic-font-family-primary) }
+	.Ff\(1\) 	 		{ --atomic-font-family: var(--atomic-font-family-1) }
+	.Ff\(2\) 	 		{ --atomic-font-family: var(--atomic-font-family-2) }
+	.Ff\(3\) 	 		{ --atomic-font-family: var(--atomic-font-family-3) }
+	.Ff\(4\) 	 		{ --atomic-font-family: var(--atomic-font-family-4) }
+	.Ff\(5\) 	 		{ --atomic-font-family: var(--atomic-font-family-5) }
+	.Ff\(6\) 	 		{ --atomic-font-family: var(--atomic-font-family-6) }
+
+[class*="Fl("] 			{ flex: var(--atomic-flex) }
+	.Fl\(0\%\) 	 	    { --atomic-flex: var(--atomic-0pct) }
+	.Fl\(10\%\) 	 	{ --atomic-flex: var(--atomic-10pct) }
+	.Fl\(20\%\) 	 	{ --atomic-flex: var(--atomic-20pct) }
+	.Fl\(30\%\) 	 	{ --atomic-flex: var(--atomic-30pct) }
+	.Fl\(40\%\) 	 	{ --atomic-flex: var(--atomic-40pct) }
+	.Fl\(50\%\) 	 	{ --atomic-flex: var(--atomic-50pct) }
+	.Fl\(60\%\) 	 	{ --atomic-flex: var(--atomic-60pct) }
+	.Fl\(70\%\) 	 	{ --atomic-flex: var(--atomic-70pct) }
+	.Fl\(80\%\) 	 	{ --atomic-flex: var(--atomic-80pct) }
+	.Fl\(90\%\) 	 	{ --atomic-flex: var(--atomic-90pct) }
+	.Fl\(100\%\) 	 	{ --atomic-flex: var(--atomic-100pct) }
+
+[class*="Fs("] 			{ font-size: var(--atomic-font-size) }
+	.Fs\(12p\) 			{ --atomic-font-size: var(--atomic-12px) }
+	.Fs\(12\.5p\) 		{ --atomic-font-size: var(--atomic-12-5px) }
+	.Fs\(13p\) 			{ --atomic-font-size: var(--atomic-13px) }
+	.Fs\(13\.5p\) 		{ --atomic-font-size: var(--atomic-13-5px) }
+	.Fs\(14p\) 			{ --atomic-font-size: var(--atomic-14px) }
+	.Fs\(14\.5p\) 		{ --atomic-font-size: var(--atomic-14-5px) }
+	.Fs\(15p\) 			{ --atomic-font-size: var(--atomic-15px) }
+	.Fs\(15\.5p\) 		{ --atomic-font-size: var(--atomic-15-5px) }
+	.Fs\(16p\) 			{ --atomic-font-size: var(--atomic-16px) }
+	.Fs\(16\.5p\) 		{ --atomic-font-size: var(--atomic-16-5px) }
+	.Fs\(17p\) 			{ --atomic-font-size: var(--atomic-17px) }
+	.Fs\(17\.5p\) 		{ --atomic-font-size: var(--atomic-17-5px) }
+	.Fs\(18p\) 			{ --atomic-font-size: var(--atomic-18px) }
+	.Fs\(18\.5p\) 		{ --atomic-font-size: var(--atomic-18-5px) }
+	.Fs\(19p\) 			{ --atomic-font-size: var(--atomic-19px) }
+	.Fs\(19\.5p\) 		{ --atomic-font-size: var(--atomic-19-5px) }
+	.Fs\(20p\) 			{ --atomic-font-size: var(--atomic-20px) }
+	.Fs\(20\.5p\) 		{ --atomic-font-size: var(--atomic-20-5px) }
+	.Fs\(21p\) 			{ --atomic-font-size: var(--atomic-21px) }
+	.Fs\(21\.5p\) 		{ --atomic-font-size: var(--atomic-21-5px) }
+	.Fs\(22p\) 			{ --atomic-font-size: var(--atomic-22px) }
+	.Fs\(22\.5p\) 		{ --atomic-font-size: var(--atomic-22-5px) }
+	.Fs\(23p\) 			{ --atomic-font-size: var(--atomic-23px) }
+	.Fs\(23\.5p\) 		{ --atomic-font-size: var(--atomic-23-5px) }
+	.Fs\(24p\) 			{ --atomic-font-size: var(--atomic-24px) }
+	.Fs\(32p\) 			{ --atomic-font-size: var(--atomic-32px) }
+	.Fs\(1r\) 			{ --atomic-font-size: var(--atomic-1rem) }
+	.Fs\(2r\) 			{ --atomic-font-size: var(--atomic-2rem) }
+	.Fs\(3r\) 			{ --atomic-font-size: var(--atomic-3rem) }
+	.Fs\(4r\) 			{ --atomic-font-size: var(--atomic-4rem) }
+	.Fs\(5r\) 			{ --atomic-font-size: var(--atomic-5rem) }
+	.Fs\(6r\) 			{ --atomic-font-size: var(--atomic-6rem) }
+	.Fs\(7r\) 			{ --atomic-font-size: var(--atomic-7rem) }
+	.Fs\(8r\) 			{ --atomic-font-size: var(--atomic-8rem) }
+	.Fs\(9r\) 			{ --atomic-font-size: var(--atomic-9rem) }
+	.Fs\(10r\) 			{ --atomic-font-size: var(--atomic-10rem) }
+
+[class*="Fw("]			{ font-weight: var(--atomic-font-weight) }
+	.Fw\(100\) 			{ --atomic-font-weight: var(--atomic-100) }
+	.Fw\(200\) 			{ --atomic-font-weight: var(--atomic-200) }
+	.Fw\(300\) 			{ --atomic-font-weight: var(--atomic-300) }
+	.Fw\(400\) 			{ --atomic-font-weight: var(--atomic-400) }
+	.Fw\(500\) 			{ --atomic-font-weight: var(--atomic-500) }
+	.Fw\(600\) 			{ --atomic-font-weight: var(--atomic-600) }
+
+[class*="Jc("]		    { justify-content: var(--atomic-justify-content) }
+	.Jc\(fs\)			{ --atomic-justify-content: var(--atomic-flex-start) }
+	.Jc\(fe\)  	 		{ --atomic-justify-content: var(--atomic-flex-end) }
+	.Jc\(sa\) 			{ --atomic-justify-content: var(--atomic-space-around) }
+	.Jc\(sb\) 			{ --atomic-justify-content: var(--atomic-space-between) }
+	.Jc\(c\)			{ --atomic-justify-content: var(--atomic-center) }
+
+[class*="H("] 			{ height: var(--atomic-height) }
+	.H\(0\)         	{ --atomic-height:var(--atomic-0) }
+	.H\(a\)         	{ --atomic-height:var(--atomic-auto) }
+	.H\(100vh\)         { --atomic-height:var(--atomic-100vh) }
+	.H\(100\%\)         { --atomic-height:var(--atomic-100pct) }
+
+[class*="Of("] 			{ object-fit: var(--atomic-object-fit) }
+	.Of\(cv\)         	{ --atomic-object-fit:var(--atomic-cover) }
+	.Of\(cn\)         	{ --atomic-object-fit:var(--atomic-contain) }
+
+[class*="Op("] 			{ opacity: var(--atomic-opacity) }
+	.Op\(0\)         	{ --atomic-opacity:var(--atomic-0) }
+    .Op\(0\.1\)         { --atomic-opacity:var(--atomic-0-1) }
+    .Op\(0\.2\)         { --atomic-opacity:var(--atomic-0-2) }
+    .Op\(0\.3\)         { --atomic-opacity:var(--atomic-0-3) }
+    .Op\(0\.4\)         { --atomic-opacity:var(--atomic-0-4) }
+    .Op\(0\.5\)         { --atomic-opacity:var(--atomic-0-5) }
+    .Op\(0\.6\)         { --atomic-opacity:var(--atomic-0-6) }
+    .Op\(0\.7\)         { --atomic-opacity:var(--atomic-0-7) }
+    .Op\(0\.8\)         { --atomic-opacity:var(--atomic-0-8) }
+    .Op\(0\.9\)         { --atomic-opacity:var(--atomic-0-9) }
+    .Op\(10\)         	{ --atomic-opacity:var(--atomic-1) }
+
+[class*="P("]			{ padding: var(--atomic-padding) }
+	.P\(0\)				{ --atomic-padding: var(--atomic-0) }
+	.P\(1r\)			{ --atomic-padding: var(--atomic-1rem) }
+	.P\(2r\) 			{ --atomic-padding: var(--atomic-2rem) }
+	.P\(3r\)			{ --atomic-padding: var(--atomic-3rem) }
+	.P\(4r\)			{ --atomic-padding: var(--atomic-4rem) }
+	.P\(5r\) 			{ --atomic-padding: var(--atomic-5rem) }
+	.P\(6r\)			{ --atomic-padding: var(--atomic-6rem) }
+	.P\(7r\) 			{ --atomic-padding: var(--atomic-7rem) }
+	.P\(8r\)			{ --atomic-padding: var(--atomic-8rem) }
+	.P\(9r\)			{ --atomic-padding: var(--atomic-9rem) }
+	.P\(10r\) 			{ --atomic-padding: var(--atomic-10rem)}
+	.P\(1p\) 			{ --atomic-padding: var(--atomic-1px) }
+	.P\(2p\)			{ --atomic-padding: var(--atomic-2px) }
+	.P\(3p\)			{ --atomic-padding: var(--atomic-3px) }
+	.P\(4p\)			{ --atomic-padding: var(--atomic-4px) }
+	.P\(5p\)			{ --atomic-padding: var(--atomic-5px) }
+	.P\(6p\)			{ --atomic-padding: var(--atomic-6px) }
+	.P\(7p\) 			{ --atomic-padding: var(--atomic-7px) }
+	.P\(8p\)			{ --atomic-padding: var(--atomic-8px) }
+	.P\(9p\)			{ --atomic-padding: var(--atomic-9px) }
+	.P\(10p\)			{ --atomic-padding: var(--atomic-10px) }
+	.P\(11p\)			{ --atomic-padding: var(--atomic-11px) }
+	.P\(12p\)			{ --atomic-padding: var(--atomic-12px) }
+	.P\(13p\)			{ --atomic-padding: var(--atomic-13px) }
+	.P\(14p\)			{ --atomic-padding: var(--atomic-14px) }
+	.P\(15p\)			{ --atomic-padding: var(--atomic-15px) }
+	.P\(16p\) 			{ --atomic-padding: var(--atomic-16px) }
+	.P\(24p\)			{ --atomic-padding: var(--atomic-24px) }
+	.P\(32p\)			{ --atomic-padding: var(--atomic-32px) }
+
+[class*="Pt("]			{ padding-top: var(--atomic-padding-top) }
+	.Pt\(0\) 			{ --atomic-padding-top: var(--atomic-0)	}
+
+[class*="Pt("]			{ padding-top: var(--atomic-padding-top) }
+	.Pt\(1r\) 			{ --atomic-padding-top: var(--atomic-1rem)	}
+
+[class*="Pb("]			{ padding-bottom: var(--atomic-padding-bottom) }
+	.Pb\(0\) 			{ --atomic-padding-bottom: var(--atomic-0)	}
+
+[class*="Pb("]			{ padding-bottom: var(--atomic-padding-bottom) }
+	.Pb\(1r\) 			{ --atomic-padding-bottom: var(--atomic-1rem)	}
+
+[class*="Lh("]			{ line-height: var(--atomic-line-height) }
+	.Lh\(1\) 			{ --atomic-line-height: var(--atomic-1) }
+	.Lh\(1\.4\) 		{ --atomic-line-height: var(--atomic-1-4) }
+	.Lh\(1\.6\) 		{ --atomic-line-height: var(--atomic-1-6) }
+	.Lh\(1\.8\) 		{ --atomic-line-height: var(--atomic-1-8) }
+	.Lh\(2\) 			{ --atomic-line-height: var(--atomic-2) }
+	.Lh\(2\.4\) 		{ --atomic-line-height: var(--atomic-2-4) }
+	.Lh\(2\.6\) 		{ --atomic-line-height: var(--atomic-2-6) }
+	.Lh\(2\.8\) 		{ --atomic-line-height: var(--atomic-2-8) }
+	.Lh\(3\) 			{ --atomic-line-height: var(--atomic-3) }
+	.Lh\(4\) 			{ --atomic-line-height: var(--atomic-4) }
+
+[class*="M("]			{ margin: var(--atomic-margin) }
+	.M\(a\) 			{ --atomic-margin: var(--atomic-auto) }
+	.M\(0\)				{ --atomic-margin: var(--atomic-0) }
+	.M\(1r\)			{ --atomic-margin: var(--atomic-1rem) }
+	.M\(2r\)			{ --atomic-margin: var(--atomic-2rem) }
+	.M\(3r\)			{ --atomic-margin: var(--atomic-3rem) }
+	.M\(4r\)			{ --atomic-margin: var(--atomic-4rem) }
+	.M\(5r\)			{ --atomic-margin: var(--atomic-5rem) }
+	.M\(6r\)			{ --atomic-margin: var(--atomic-6rem) }
+
+[class*="Mt("]			{ margin-top: var(--atomic-margin-top) }
+	.Mt\(0\) 			{ --atomic-margin-top: var(--atomic-0)	}
+
+[class*="Mt("]			{ margin-top: var(--atomic-margin-top) }
+	.Mt\(1r\) 			{ --atomic-margin-top: var(--atomic-1rem)	}
+
+[class*="Mb("]			{ margin-bottom: var(--atomic-margin-bottom) }
+	.Mb\(0\) 			{ --atomic-margin-bottom: var(--atomic-0)	}
+
+[class*="Mb("]			{ margin-bottom: var(--atomic-margin-bottom) }
+	.Mb\(1r\) 			{ --atomic-margin-bottom: var(--atomic-1rem)	}
+
+
+[class*="Ml("]			{ margin-left: var(--atomic-margin-left) }
+	.Ml\(a\) 			{ --atomic-margin-left: var(--atomic-auto)	}
+	.Ml\(0\) 			{ --atomic-margin-left: var(--atomic-0)	}
+	.Ml\(1r\) 			{ --atomic-margin-left: var(--atomic-1rem)	}
+	.Ml\(2r\) 			{ --atomic-margin-left: var(--atomic-2rem)	}
+	.Ml\(3r\) 			{ --atomic-margin-left: var(--atomic-3rem)	}
+	.Ml\(4r\) 			{ --atomic-margin-left: var(--atomic-4rem)	}
+	.Ml\(5r\) 			{ --atomic-margin-left: var(--atomic-5rem)	}
+	.Ml\(6r\) 			{ --atomic-margin-left: var(--atomic-6rem)	}
+
+[class*="Mr("]			{ margin-right: var(--atomic-margin-right) }
+	.Mr\(a\) 			{ --atomic-margin-right: var(--atomic-auto) }
+	.Mr\(0\)			{ --atomic-margin-right: var(--atomic-0) }
+	.Mr\(1r\)			{ --atomic-margin-right: var(--atomic-1rem) }
+	.Mr\(2r\)			{ --atomic-margin-right: var(--atomic-2rem) }
+	.Mr\(3r\)			{ --atomic-margin-right: var(--atomic-3rem) }
+	.Mr\(4r\)			{ --atomic-margin-right: var(--atomic-4rem) }
+	.Mr\(5r\)			{ --atomic-margin-right: var(--atomic-5rem) }
+	.Mr\(6r\)			{ --atomic-margin-right: var(--atomic-6rem) }
+
+[class*="Mnh"]			{ min-height: var(--atomic-min-height) }
+	.Mnh\(300p\) 		{ --atomic-min-height: var(--atomic-300px) }
+
+[class*="Mnw"]			{ min-width: var(--atomic-min-width) }
+	.Mnw\(0\) 			{ --atomic-min-width: var(--atomic-0) }
+	.Mnw\(10p\)			{ --atomic-min-width: var(--atomic-10px) }
+	.Mnw\(16p\)			{ --atomic-min-width: var(--atomic-16px) }
+	.Mnw\(24p\)			{ --atomic-min-width: var(--atomic-24px) }
+	.Mnw\(32p\)			{ --atomic-min-width: var(--atomic-32px) }
+	.Mnw\(48p\)			{ --atomic-min-width: var(--atomic-48px) }
+	.Mnw\(56p\)			{ --atomic-min-width: var(--atomic-56px) }
+	.Mnw\(64p\)			{ --atomic-min-width: var(--atomic-64px) }
+	.Mnw\(70p\)			{ --atomic-min-width: var(--atomic-70px) }
+	.Mnw\(80p\)			{ --atomic-min-width: var(--atomic-80px) }
+	.Mnw\(90p\)			{ --atomic-min-width: var(--atomic-90px) }
+	.Mnw\(100p\)		{ --atomic-min-width: var(--atomic-100px) }
+	.Mnw\(150p\)		{ --atomic-min-width: var(--atomic-150px) }
+	.Mnw\(200p\)		{ --atomic-min-width: var(--atomic-200px) }
+	.Mnw\(250p\)		{ --atomic-min-width: var(--atomic-250px) }
+	.Mnw\(300p\)		{ --atomic-min-width: var(--atomic-300px) }
+	.Mnw\(350p\)		{ --atomic-min-width: var(--atomic-350px) }
+	.Mnw\(100\%\)		{ --atomic-min-width: var(--atomic-100pct) }
+
+[class*="Mxw("]			{ max-width: var(--atomic-max-width) }
+	.Mxw\(0\) 			{ --atomic-max-width: var(--atomic-0) }
+	.Mxw\(16p\) 		{ --atomic-max-width: var(--atomic-16px) }
+	.Mxw\(32p\) 		{ --atomic-max-width: var(--atomic-32px) }
+	.Mxw\(64p\) 		{ --atomic-max-width: var(--atomic-64px) }
+	.Mxw\(100p\)		{ --atomic-max-width: var(--atomic-100px) }
+	.Mxw\(150p\)		{ --atomic-max-width: var(--atomic-150px) }
+	.Mxw\(200p\)		{ --atomic-max-width: var(--atomic-200px) }
+	.Mxw\(250p\)		{ --atomic-max-width: var(--atomic-250px) }
+	.Mxw\(300p\)		{ --atomic-max-width: var(--atomic-300px) }
+	.Mxw\(350p\)		{ --atomic-max-width: var(--atomic-350px) }
+	.Mxw\(400p\)		{ --atomic-max-width: var(--atomic-400px) }
+	.Mxw\(450p\)		{ --atomic-max-width: var(--atomic-450px) }
+	.Mxw\(499p\)		{ --atomic-max-width: var(--atomic-499px) }
+	.Mxw\(768p\)		{ --atomic-max-width: var(--atomic-768px) }
+	.Mxw\(1024p\)		{ --atomic-max-width: var(--atomic-1024px) }
+	.Mxw\(1268p\)		{ --atomic-max-width: var(--atomic-1268px) }
+	.Mxw\(1366p\)		{ --atomic-max-width: var(--atomic-1366px) }
+	.Mxw\(100\%\)		{ --atomic-max-width: var(--atomic-100pct) }
+
+[class*="Ta("] 			{ text-align: var(--atomic-text-align) }
+	.Ta\(c\)            { --atomic-text-align:var(--atomic-center) }
+	.Ta\(r\)            { --atomic-text-align:var(--atomic-right) }
+	.Ta\(l\)            { --atomic-text-align:var(--atomic-left) }
+
+[class*="W("]			{ width: var(--atomic-width) }
+	.W\(0\)				{ --atomic-width: var(--atomic-0) }
+	.W\(16p\) 			{ --atomic-width: var(--atomic-16px) }
+	.W\(32p\) 			{ --atomic-width: var(--atomic-32px) }
+	.W\(64p\) 			{ --atomic-width: var(--atomic-64px) }
+	.W\(100p\)		    { --atomic-width: var(--atomic-100px) }
+	.W\(150p\)		    { --atomic-width: var(--atomic-150px) }
+	.W\(200p\)		    { --atomic-width: var(--atomic-200px) }
+	.W\(250p\)		    { --atomic-width: var(--atomic-250px) }
+	.W\(10\%\)			{ --atomic-width: var(--atomic-10pct) }
+	.W\(20\%\)			{ --atomic-width: var(--atomic-20pct) }
+	.W\(30\%\)			{ --atomic-width: var(--atomic-30pct) }
+	.W\(40\%\)			{ --atomic-width: var(--atomic-40pct) }
+	.W\(50\%\)			{ --atomic-width: var(--atomic-50pct) }
+	.W\(60\%\)			{ --atomic-width: var(--atomic-60pct) }
+	.W\(70\%\)			{ --atomic-width: var(--atomic-70pct) }
+	.W\(80\%\) 			{ --atomic-width: var(--atomic-80pct) }
+	.W\(90\%\)			{ --atomic-width: var(--atomic-90pct) }
+	.W\(100\%\)			{ --atomic-width: var(--atomic-100pct) }

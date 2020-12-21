@@ -1,0 +1,15 @@
+.header {
+	min-height: 50vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 4rem 0rem;
+}
+
+@media(min-width:1024px) {
+	.header {
+		min-height: 90vh;
+	}
+}
+
+

@@ -1,0 +1,74 @@
+
+.list_style-circle li::before {
+    content: "\2022";
+    color: var(--color-white);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+
+ul.list_style-circle {
+    list-style-type: circle;
+}
+
+ul.list_style-square {
+    list-style-type: square;
+}
+
+ul.list_itemgap-1 li {
+    margin: 4px 0px;
+}
+
+ul.list_itemgap-2 li {
+    margin: 8px 0px;
+}
+
+ul.list_itemgap-3 li {
+    margin: 16px 0px;
+}
+
+ul.list_itemgap-4 li {
+    margin: 32px 0px;
+}
+
+
+ul.list_row {
+    display: flex;
+}
+
+ul.list_columns {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .list-large li{
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.list-large li svg {
+    margin-right:1rem ;
+} */
+
+
+ul.list_large {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    /* height: 100%; */
+    width: 100%;
+}
+
+ul.list_large li{
+    margin: 0;
+    padding: 16px 0px;
+}
+
+/* ul.list_large li > svg {
+    margin-right: 1rem;
+} */

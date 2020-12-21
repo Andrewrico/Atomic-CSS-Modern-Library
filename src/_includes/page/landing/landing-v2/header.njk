@@ -1,0 +1,43 @@
+{% set css %}
+    {% include "./styles.css" %}
+{% endset %}
+<style>
+  {{ css | cssmin | safe }}
+</style>
+<header class="header landing-v2">
+    <div class="grid columns-1 center mxw-1024">
+
+        <div id="field_1" class="column animated fadeInLeft">
+            <h1>
+               <span class="textShadow-2">👋 </span>NEW DISCOVERY REVEALS: A <span class="textColor-orange">"Fat Blaster"</span> Brain <span class="textColor-orange"> Molecule </span>That Can <span class="textColor-orange">Melt</span> Up to <span class="textColor-orange">200 lbs Of RAW Fat </span> Fast!!! <span class="textShadow-2">🙌</span>
+            </h1>
+            <br>
+            <p class="lead textColor-black">
+                {{ description }}
+            </p>
+            <br>
+            <div class="animated fadeIn action">
+                    {% include "partials/form/lead/lead.njk" %}
+            </div>
+        </div>
+        
+        <div id="field_2" class="column animated fadeInLeft text-center">
+            <div class="animated fadeInLeft">
+                <h3 class="text-center fontSize-3">Congratulations!</h3>
+                <p style="color:black" class="lead">
+                    <span class="textShadow-2">🙏</span>{{ thankyou }}<span class="textShadow-2">💪💪 </span>
+                </p>
+                <p style="color:black" class="lead">
+                    In the meantime, get started on your custom keto diet plan by clicking the button bellow.
+                </p>
+                {% include "partials/button/button-component.njk" %}
+            </div>
+        </div>
+
+        <div class="clock-default animated onscroll">
+            {% include "partials/clock/clock.njk" %}
+        </div>
+
+    </div>
+</header>
+{{ content | safe }}

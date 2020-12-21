@@ -1,0 +1,14 @@
+<div class="tekton-accordion pt-6">
+    <h3 class="textColor-white text-center m-0">
+        GALLERY
+    </h3>
+    <br>
+    {%- for gallery in DATA_GALLERY.galleries -%}
+    <button class="accordion">
+        {{gallery.Q}}
+    </button>
+    <p class="panel">
+        {{gallery.A}}
+    </p>
+    {%- endfor -%}
+</div> 

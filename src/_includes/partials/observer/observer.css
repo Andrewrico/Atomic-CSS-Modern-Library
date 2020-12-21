@@ -1,0 +1,10 @@
+
+.onscroll {
+	opacity: 0;
+	transition: all 300ms ease-in-out;
+}
+
+/* .onscroll.fadeInUp {
+	opacity: 1;
+	animation: fadeIn 400ms ease-in-out;
+} */

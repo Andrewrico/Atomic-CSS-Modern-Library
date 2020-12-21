@@ -1,0 +1,56 @@
+.header {
+	min-height: 50vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 4rem 0rem;
+}
+
+@media(min-width:1024px) {
+	.header {
+		min-height: 90vh;
+	}
+}
+
+.banner_action {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.banner_action a {
+	margin: 8px;
+}
+
+@media(min-width:1024px) {
+	.banner_action a {
+		width: 45%;
+	}
+}
+
+.header_base {
+	min-height: 399px;
+	color: white;
+	background: var(--color-secondary);
+}
+
+
+
+.header_banner-3 {
+	min-height: 399px;
+	color: white;
+	background: rgb(51, 45, 253);
+	background: linear-gradient(73deg, var(--color-secondary) 12%, var(--color-secondary) 47%, rgba(238, 253, 45, 0) 100%),
+		url("/images/beach.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+
+.header_banner-4 {
+	min-height: 499px;
+	color: white;
+	background: var(--color-secondary);
+}
+

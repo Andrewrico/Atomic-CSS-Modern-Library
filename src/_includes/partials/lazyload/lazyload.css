@@ -1,0 +1,16 @@
+/*IMAGES LAZY*/
+.image_lazy {
+    margin: auto;
+    width: 64px !important;
+    height: 64px !important;
+    object-fit: contain;
+}
+
+.image_lazyblur {
+    margin: auto;
+    backface-visibility: hidden;
+    animation: blurlazy 300ms;
+    min-height:100px;
+    min-width:100px;
+
+}

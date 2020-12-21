@@ -1,0 +1,198 @@
+{% set css %}
+  {% include "./drawer/drawer.css" %}
+{% endset %}
+<style>
+  {{ css | cssmin | safe }}
+</style>
+
+<div id="backdrop"></div>
+
+<div aria-label="NAVIGATION NAVBAR MENU" id="nav_navbar" class="
+nav_navbar
+nav_navbar-responsive
+backgroundColor-white
+
+">
+    <div class="nav_navbar-container"  style="padding:8px">
+        <div class="nav_navbar-left">
+            <div id="nav_brand" class="nav_navbar-brand">
+                {# <h1 class="flex p-1"><a class="nav_navbar-logo" href="/" title="{{site.name}}">{{site.name}}</a></h1> #}
+                <img class="nav_navbar-logo" src="{{site.logoPath}}" alt="{{site.name}} Logo" title="{{site.name}} Logo" style="width:300px">
+            </div>
+        </div>
+        <div class="nav_navbar-right">
+            <button id="open-drawer" class="nav_navbar-toggle">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 459 459" style="enable-background:new 0 0 459 459;" xml:space="preserve"><path d="M0,382.5h459v-51H0V382.5z M0,255h459v-51H0V255z M0,76.5v51h459v-51H0z"/></svg>
+            </button>
+
+            <nav id="navigation" class="nav_navbar-nav">
+
+                <ul id="nav_navbar-menu" class="nav_navbar-menu">
+
+                    <li class="nav_navbar-item">
+                        <a class="nav_navbar-link" href="/">
+                            Home
+                        </a>
+                    </li>
+
+                    {# Temporarily Unavailable #}
+                    {# <li class="nav_navbar-item nav_dropdown">
+                        <a class="nav_navbar-link" href="/portfolio">
+                            Portfolio
+                        </a>
+                    </li> #}
+
+                    <li class="nav_navbar-item nav_dropdown" role="soluctions-menu">
+                        <a class="nav_navbar-link" href="/solutions"  
+                        aria-expanded="false"
+                        aria-controls="soluctions-menulist"
+                        role="menuitem"
+                        >
+                            Solutions
+                            <svg style="margin-left:8px" width="16px" height="16px" fill="var(--color-black)">    
+                                <use href="/icons/essentials.svg#icon-arrow-drop"></use>
+                            </svg>
+                        </a>
+                        <div id="soluctions-menulist" class="nav_dropcontent" hidden>
+                            {% for solutions in collections.solutions %}
+                                {% set relAttribute = '' %}
+                                {% if solutions.rel %}
+                                    {% set relAttribute = ' rel="' + solutions.rel + '"' %}
+                                {% endif %}
+                                {% set currentAttribute = '' %}
+                                {% if  page.url == solutions.url%}
+                                    {% set currentAttribute = ' aria-current="page"' %}
+                                {% endif %}
+                                <a class="nav_navbar-link " href="{{ solutions.url | url }}" {{ currentAttribute | safe }} {{ relAttribute | safe }}>{{ solutions.data.title }}</a>
+                            {% endfor %}
+                        </div>
+                    </li>
+
+                    <li class="nav_navbar-item nav_dropdown">
+                        <a class="nav_navbar-link " href="/industries"
+                        >
+                            Industries
+                            <svg style="margin-left:8px" width="16px" height="16px" fill="var(--color-black)">    
+                                <use href="/icons/essentials.svg#icon-arrow-drop"></use>
+                            </svg>
+                        </a>
+                        <div class="nav_dropcontent">
+                            {% for industries in collections.industries %}
+                                {% set relAttribute = '' %}
+                                {% set currentAttribute = '' %}
+                                {% if industries.rel %}
+                                    {% set relAttribute = ' rel="' + industries.rel + '"' %}
+                                {% endif %}
+                                {% if  page.url == industries.url%}
+                                    {% set currentAttribute = ' aria-current="page"' %}
+                                {% endif %}
+                                <a class="nav_navbar-link " href="{{ industries.url }}" {{ currentAttribute | safe }} {{ relAttribute | safe }}>{{ industries.data.title }}</a>
+                            {% endfor %}
+                        </div>
+                    </li>
+
+                     <li class="nav_navbar-item">
+                        <a  style="display:flex; 
+                        align-items:center; 
+                        justify-content:space-around; 
+                        min-width:160px; " 
+                        href="tel:{{site.phonenumber}}" class="textColor-primary">
+                            <svg style="margin-right:6px" width="32px" height="32px" fill="var(--color-secondary)">    
+                                <use href="/icons/essentials.svg#icon-phone"></use>
+                            </svg> 
+                             {{site.phonenumber}}
+                        </a>
+                    </li>
+
+                    <li class="nav_navbar-item">
+                        <a href="/get-a-quote/" class="button button_clickable button_primary-inverted" 
+                            style="min-width:200px; 
+                            border-width:3px; 
+                            border-radius:32px;
+                            font-weight:800;
+                            "
+                        >
+                            Start A Project
+                            <svg style="margin-left:8px" width="19px" height="19px" fill="var(--color-secondary)">    
+                                <use href="/icons/essentials.svg#icon-form"></use>
+                            </svg>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+</div>
+
+<div aria-label="NAVIGATION DRAWER MENU" id="drawer" class="nav_drawer">
+    <div class="nav_drawer-header">
+        <button id="close-drawer" class="nav_drawer-toggle">
+            <svg viewbox="0 0 31.112 31.112" xmlns="http://www.w3.org/2000/svg"><polygon points="31.112,1.414 29.698,0 15.556,14.142 1.414,0 0,1.414 14.142,15.556 0,29.698 1.414,31.112 15.556,16.97 29.698,31.112 31.112,29.698 16.97,15.556 "/></svg>
+        </button>
+        <div class="nav_drawer-brand">
+            {# <a class="nav_drawer-title" href="/" title="{{site.name}}">{{site.name}}</a> #}
+            <img class="nav_drawer-logo" src="{{site.logoPath}}" alt="{{site.name}} Logo" title="{{site.name}} Logo">
+        </div>
+    </div>
+    <nav class="nav_drawer-nav">
+        <ul id="nav_drawer-menu" class="nav_drawer-menu">
+            <li class="nav_drawer-item">
+                <a class="button button_primary" href="/get-a-quote" aria-label="GET A QUOTE" style="color:white!important;width:100%;">
+                    Get A Quote
+                </a>
+            </li>
+            {% for item in navigation.items %}
+                {% set relAttribute = '' %}
+                {% set currentAttribute = '' %}
+                {% if item.rel %}
+                    {% set relAttribute = ' rel= "' + item.rel + '"' %}
+                {% endif %}
+                {% set currentAttribute = ' aria-current="page"' %}
+                <li class="nav_drawer-item">
+                    <a class="nav_drawer-link" href="{{ item.url }}" {{ currentAttribute | safe }} {{ relAttribute | safe }}>{{ item.text }}</a>
+                </li>
+            {% endfor %}
+                
+            {%- for solutions in collections.solutions -%}
+                {% set relAttribute = '' %}
+                {% set currentAttribute = '' %}
+                {% if solutions.rel %}
+                    {% set relAttribute = ' rel="' + solutions.rel + '"' %}
+                {% endif %}
+                {% if  page.url == solutions.url%}
+                    {% set currentAttribute = ' aria-current="page"' %}
+                {% endif %}
+                <li class="nav_drawer-item">
+                    <a class="nav_drawer-link" href="{{ solutions.url | url }}" aria-label="SERVICES">
+                        {{ solutions.data.title }}
+                    </a>
+                </li>
+            {% endfor %}
+            {%- for industries in collections.industries -%}
+                {% set relAttribute = '' %}
+                {% set currentAttribute = '' %}
+                {% if industries.rel %}
+                    {% set relAttribute = ' rel="' + industries.rel + '"' %}
+                {% endif %}
+                {% if  page.url == industries.url%}
+                    {% set currentAttribute = ' aria-current="page"' %}
+                {% endif %}
+                <li class="nav_drawer-item">
+                    <a class="nav_drawer-link" href="{{ industries.url | url }}" aria-label="INDUSTRIES">
+                        {{ industries.data.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</div>
+
+
+{% set js %}
+  {% include "./drawer.js" %}
+{% endset %}
+<script>
+  {{ js | jsmin | safe }}
+</script>

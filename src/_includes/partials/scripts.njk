@@ -1,0 +1,7 @@
+{% set js %}
+  {% include "./observer/observer.js" %}
+  {% include "./lazyload/lazyload.js" %}
+{% endset %}
+<script>
+  {{ js | jsmin | safe }}
+</script>

@@ -1,0 +1,28 @@
+.note {
+    padding: 2rem 1rem;
+    display: flex;
+    background: var(--color-primary);
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    -webkit-box-shadow: 10px 10px 0px -1px var(--color-gray);
+    -moz-box-shadow: 10px 10px 0px -1px var(--color-gray);
+    box-shadow: 10px 10px 0px -1px var(--color-gray);
+    color:var(--color-white);
+
+}
+.note img {
+   max-width: 200px;
+   margin: 8px;
+}
+
+.note svg {
+    fill:var(--color-orange)
+}
+
+.note p {
+    font-family: 'Archivo Black';
+}
+
+.note a {
+    font-family: 'Archivo Black';
+    color:var(--color-orange);
+}

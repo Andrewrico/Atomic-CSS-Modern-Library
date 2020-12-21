@@ -1,0 +1,15 @@
+{
+  
+    "layout": "layouts/landing-v1.njk",
+
+    "_page_has_jquery_": "/static/js/jquery.js",
+  
+    "_page_has_animatedcss_": "/static/css/animated.css",
+
+    "brandName": "Available Now!",
+
+    "brandColor": "green",
+
+    "background": "linear-gradient(73deg, green 12%, green 47%, rgba(238, 253, 45, 0) 100%), url('/images/beach.jpg')"
+  
+  }

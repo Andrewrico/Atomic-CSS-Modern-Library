@@ -1,0 +1,13 @@
+{
+  "name": "www.publicandmoney.com",
+  "tagline": "Public and Money only promote legit products",
+  "description": "www.publicandmoney.com",
+  "introduction": "Product Marketplace",
+  "url": "https://www.publicandmoney.com",
+  "faviconPath": "/images/favicon.ico",
+  "logoPath": "/images/logo.png",
+  "imgMetada": "© www.publicandmoney.com",
+  "enableThirdPartyComments": false,
+  "maxPostsPerPage": 5
+}
+

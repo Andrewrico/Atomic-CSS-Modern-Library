@@ -1,0 +1,29 @@
+.keywords {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    margin: 0;
+    padding: 0;
+}
+@media(min-width:768px) {
+    .keywords {
+        justify-content: flex-start;
+    }
+}
+
+.keywords li {
+    margin: 4px;
+
+}
+.keywords li * {
+    width: 100%;
+    word-break: break-all;
+    margin: 0px;
+    padding: 3px 6px;
+    text-transform: lowercase;
+    font-size: 14px;
+    font-family: var(--font-family-1);
+    border: 1px solid white;
+    border-radius: 12px;
+}

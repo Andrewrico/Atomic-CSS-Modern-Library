@@ -1,0 +1,8 @@
+.brands img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    filter: invert(1) brightness(50%) sepia(100%) saturate(10000%);
+}

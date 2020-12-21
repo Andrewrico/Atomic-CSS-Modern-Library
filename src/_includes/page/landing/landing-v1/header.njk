@@ -1,0 +1,55 @@
+{% set css %}
+    {% include "./styles.css" %}
+{% endset %}
+<style>
+  {{ css | cssmin | safe }}
+</style>
+
+
+<header 
+    style="background:{{ background }}; background-size:cover;" 
+    class="header landing-v1"
+>
+    <div class="grid columns-2 size-1l-1m">
+        <div class="column animated onscroll ">
+            <div id="field_1" class="text-center textColor-white">
+                <p class="animated fadeInUp subtitle">
+                    {{ subtitle }}
+                </p>
+                <h1 class="animated fadeIn title">
+                    {{ title }}
+                </h1>
+                <p class="animated fadeIn  lead">
+                    {{ description }}
+                </p>
+                <div class="animated fadeIn action">
+                    {% include "partials/form/lead/lead.njk" %}
+                </div>
+            </div>
+            <div id="field_2" class="column animated fadeInLeft text-center textColor-white">
+                <h3 class="textColor-white">Congratulations!</h3>
+                <p style="color:white" class="lead">
+                    <span class="textShadow-2">🙏</span>{{ thankyou }}<span class="textShadow-2">💪💪 </span>
+                </p>
+                 <p style="color:white" class="lead">
+                    In the meantime, get started on your custom keto diet plan by clicking the button bellow.
+                </p>
+                {% include "partials/button/button-component.njk" %}
+            </div>
+        </div>
+
+        <div class="column animated fadeInLeft">
+            <div class="animated fadeIn slower">
+                <div class="floating-element">
+                    {% include "partials/figure/figure.njk" %}
+                </div>
+            </div>
+        </div>
+        <div class="column center full-width">
+            <div class="clock-green animated onscroll ">
+                {% include "partials/clock/clock.njk" %}
+            </div>
+        </div>
+    </div>
+</header>
+{{ content | safe }}

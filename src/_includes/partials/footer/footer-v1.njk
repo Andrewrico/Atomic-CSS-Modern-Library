@@ -1,0 +1,43 @@
+<footer class="footer-v1">
+    <div class="grid columns-1 center animated fadeInDow">
+        <img src="/images/security-icons.png" alt="{{title}}" title="{{title}}"> 
+        <br>
+        <small class="disclosure">
+            * Disclosure: I only recommend products I would use myself and all opinions expressed here are our own. This post may contain affiliate links that at no additional cost to you.
+            <br>
+            <br>
+            * Public And Money does not share any personal information. We'll email you a copy of your results for convenient access.
+            By using www.publicandmoney.com you agree to Terms and Conditions and Privacy Policy. You may also receive email offers from us on Keto Diet products and services. You may unsubscribe at any time.
+        </small>
+        <small class="textColor-gray"> © <span id="currentYear"></span> Copyright {{ site.name }}. All Rights Reserved</small>
+    </div>
+</footer>
+
+
+
+
+
+<script>document.getElementById("currentYear").innerHTML = new Date().getFullYear();</script>
+
+<script src="/static/js/app.js" defer></script>
+
+{% include "src/_includes/inline/scripts.njk" %} 
+
+{% include "src/_includes/partials/scripts.njk" %} 
+
+{% if page.url == '/' %}
+    {% include "src/_includes/page/homepage/scripts.njk" %} 
+{% endif %}
+
+<!-- Service-Worker -->
+{# <script>
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js');
+    });
+}
+</script> #}
+
+<!-- netlify-identity -->
+{# <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async defer></script> #}
+

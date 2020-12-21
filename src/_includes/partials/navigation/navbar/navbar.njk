@@ -1,0 +1,40 @@
+{% set css %}
+  {% include "./navbar.css" %}
+{% endset %}
+<style>
+  {{ css | cssmin | safe }}
+</style>
+
+<div class="navbar">
+    <div class="navbar_container">
+        <div class="navbar_logo animated fadeInDown">
+            <img src="/images/logos/logo.png" alt="Logo" title="Logo" width="220px" />
+        </div>
+        {% if navigation.items %}
+        <nav class="navbar_menu animated fadeInDown">
+			<ul>
+			{% for item in navigation.items %}
+				{% set relAttribute = '' %}
+				{% if item.rel %}
+				    {% set relAttribute = ' rel="' + item.rel + '"' %}
+				{% endif %}
+				{% set currentAttribute = '' %}
+				{% if page.url == item.url %}
+				    {% set currentAttribute = ' aria-current="page"' %}
+				{% endif %}
+				<li>
+					<a href="{{ item.url }}"{{ relAttribute | safe }}{{ currentAttribute | safe }}>{{ item.text }}</a>
+				</li>
+			{% endfor %}
+			</ul>
+		</nav>
+		{% endif %}
+    </div>
+</div>
+
+{% set js %}
+  {% include "./navbar.js" %}
+{% endset %}
+<script>
+  {{ js | jsmin | safe }}
+</script>

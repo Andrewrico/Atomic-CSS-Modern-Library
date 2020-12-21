@@ -1,0 +1,81 @@
+{# <form 
+  class="form-seo" 
+  id="form_SEO" 
+  name="form_SEO" 
+  method="POST"
+>
+  <p id="res"></p>
+  <div class="grid columns-3">
+
+    <label for="URL1">Your SEO Analysis  <span class="required-circle">∗</span>
+      <input type="url" 
+        name="URL 1" 
+        id="URL 1" 
+        placeholder="https://yoursite.com"
+        pattern="https://.*" 
+        size="30"
+        title="URL"
+        required
+      />
+    </label>
+
+    <label for="URL 2">Competitor SEO Analysis <span class="required-circle">∗</span>
+      <input type="url" 
+        name="URL 2" 
+        id="URL 2" 
+        placeholder="https://competitorsite.com"
+        pattern="https://.*" 
+        size="30"
+        title="URL"
+        required
+        />
+    </label>
+
+    <label for="Email"> Get the results! <span class="required-circle">∗</span>
+      <input type="email" 
+          id="Email" 
+          name="Email" 
+          placeholder="john@mail.com"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+          minlength="6" 
+          title="Email"
+          required
+        />
+    </label>
+
+  </div>
+
+  <br>
+  
+  <button type="submit" onclick="valid();">Show Me The Results!
+    <svg style="margin-left:4px" width="32px" height="32px" fill="var(--color-white)">    
+          <use href="/icons/essentials.svg#icon-mail"></use>
+      </svg> 
+  </button>
+
+</form>
+
+<script>
+valid = () => { 
+    const errormsg = document.querySelector('#res');
+    const url1 = document.forms["form_SEO"]["URL 1"]; 
+    const url2 = document.forms["form_SEO"]["URL 2"]; 
+    const email = document.forms["form_SEO"]["email"]; 
+    if (url1.value == "") { 
+        errormsg.innerHTML = "Please fill out the required fields."; 
+        url1.focus(); 
+        return false; 
+    } 
+    if (url2.value == "") { 
+        errormsg.innerHTML = "Please fill out the required fields."; 
+        url2.focus(); 
+        return false; 
+    } 
+    if (email.value == "") { 
+        errormsg.innerHTML = "Please fill out the required fields."; 
+        email.focus(); 
+        return false; 
+    } 
+    return true; 
+};
+</script> #}

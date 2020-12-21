@@ -1,0 +1,98 @@
+{# <form  
+  id="form_lead"
+  name="form_lead"
+  class="form-lead" 
+  method="POST"
+>
+  <p id="response"></p>
+
+    <label for="name">
+      Name <span class="required-circle">∗</span>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          placeholder="John Doe"
+          pattern="[a-zA-Z_ ]{2,32}$"
+          minlength="0" 
+          maxlength="32"
+          title="Name"
+          required 
+        />
+    </label>
+    <br>
+    <label for="phone">
+      Phone <span class="required-circle">∗</span>
+        <input 
+          type="text" 
+          id="phone" 
+          name="phone" 
+          placeholder="888 355 - 5255" 
+          pattern="[0-9_ ]{10}$" 
+          minlength="0" 
+          maxlength="11" 
+          title="Phone"
+          required 
+        />
+    </label>
+    <br>
+    <label for="email">
+      Email <span class="required-circle">∗</span> 
+        <input 
+          type="text" 
+          id="email" 
+          name="email"  
+          placeholder="john@mail.com"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+          minlength="6" 
+          maxlength="64"
+          title="Email"
+          required
+        />
+    </label>
+    <br>
+    <label for="message">
+      Message
+        <textarea 
+          id="message" 
+          name="message" 
+          minlength="0" 
+          maxlength="250"
+          placeholder="Type your message"
+          title="Message"
+        ></textarea>
+    </label>
+    <br>
+    <button type="submit" onclick="validfields();">
+        Let's get started
+        <svg style="margin-left:4px" width="32px" height="32px" fill="var(--color-white)">    
+            <use href="/icons/essentials.svg#icon-contacts"></use>
+        </svg> 
+    </button>
+</form> 
+
+<script>
+validfields = () => { 
+    const errormsg = document.querySelector('#response');
+    const name = document.forms["form_lead"]["name"]; 
+    const phone = document.forms["form_lead"]["phone"]; 
+    const email = document.forms["form_lead"]["email"]; 
+    if (name.value == "") { 
+        errormsg.style= "display:block"; 
+        errormsg.innerHTML = "Please fill out the required fields."; 
+        name.focus(); 
+        return false; 
+    } 
+    if (phone.value == "") { 
+        errormsg.innerHTML = "Please fill out the required fields."; 
+        phone.focus(); 
+        return false; 
+    } 
+    if (email.value == "") { 
+        errormsg.innerHTML = "Please fill out the required fields."; 
+        email.focus(); 
+        return false; 
+    } 
+    return true; 
+};
+</script> #}

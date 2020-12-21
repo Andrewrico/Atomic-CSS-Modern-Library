@@ -1,0 +1,23 @@
+
+.statistics .stat {
+  
+}
+
+.statistics .stat svg {
+    width:64px;
+    height:64px;
+    fill:var(--color-primary);
+}
+
+.statistics .stat h3 {
+    color:var(--color-primary);
+    font-size: 16px;
+    font-family: var(--font-family-2);
+    max-width: 50%;
+}
+
+@media(min-width: 768px) {
+    .statistics .stat h3 {
+        font-size: 14.5px;
+    }
+}

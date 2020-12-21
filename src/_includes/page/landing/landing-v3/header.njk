@@ -1,0 +1,37 @@
+{% set css %}
+    {% include "./styles.css" %}
+{% endset %}
+<style>
+  {{ css | cssmin | safe }}
+</style>
+<header 
+    style="background:{{background}}; background-size:cover;" 
+    class="header landing-v3"
+>
+    <div class="grid columns-1 mxw-768">
+
+        <div class="card-1 animated fadeInDown">
+            <br>
+            <h1 class="animated fadeIn fontSize-2">
+               <span class="textShadow-2">👋 </span>NEW DISCOVERY REVEALS: A <span class="textColor-green">"Fat Blaster"</span> Brain <span class="textColor-green"> Molecule </span>That Can <span class="textColor-green">Melt</span> Up to <span class="textColor-green">200 lbs Of RAW Fat </span> Fast!!! <span class="textShadow-2">🙌</span>
+            </h1>
+
+            <br>
+            <div style="height:auto;max-height:500px;object-fit:cover;padding:8px;">
+                {% include "partials/figure/figure.njk" %}
+            </div>  
+            <br>
+            <p style="padding:8px;" class="animated fadeI fontSize-2"> {{ description }} </p>
+            
+            {% include "partials/button/button-component.njk" %}
+
+        </div>
+
+        <div class="clock-white animated onscroll">
+            {% include "partials/clock/clock.njk" %}
+        </div>
+
+    </div>
+    
+</header>
+{{ content | safe }}

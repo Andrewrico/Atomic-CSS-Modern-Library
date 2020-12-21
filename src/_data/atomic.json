@@ -1,0 +1,14 @@
+{
+    "card": {
+        "card": "D(flex) Fd(col) Fw(w) Jc(sb) Mxw(499) Mg(1r) C(orange) Bg(black) Pd(1r) Bs(2) Bd(gray)",
+        "title": "Fs(3r) Fm(2) Lh(1) Ta(l)",
+        "desc": "Fs(1r) Fm(1) Ta(r) Fw(200)"
+    },
+
+    "card_fency": {
+        "card": "D(flex) Fd(col) Fw(w) Jc(sb) Mxw(499) Mg(1r) Bg(black) C(orange) Pd(1r) Bs(2) Bd(gray) Ta(c)",
+        "title": "Fs(3r) Fm(2) Lh(1)",
+        "desc": "Fs(1r) Fm(1) Fw(600)"
+    }
+}
+

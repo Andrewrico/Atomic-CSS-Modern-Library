@@ -1,0 +1,14 @@
+<div class="tekton-accordion pt-6">
+    <h3 class="textColor-white text-center m-0">
+        Frequently Ask Question
+    </h3>
+    <br>
+    {%- for stats in DATA_STATS.stats -%}
+    <button class="accordion">
+        {{stats.Q}}
+    </button>
+    <p class="panel">
+        {{stats.A}}
+    </p>
+    {%- endfor -%}
+</div> 

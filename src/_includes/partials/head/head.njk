@@ -1,0 +1,62 @@
+<head>
+
+  {% include "partials/global/metadata.njk" %}
+
+  {% block head %}{% endblock %}
+
+
+  <link rel="preload" href="/static/css/stylesheet.css" as="style">
+  <link rel="preload" href="/static/css/grid.css" as="style">
+
+  <link rel="preload" as="font" href="/fonts/OpenSans-Regular.ttf" type="font/ttf">
+  <link rel="preload" as="font" href="/fonts/ArchivoBlack-Regular.ttf" type="font/ttf" >
+  <link rel="preload" as="font" href="/fonts/BreeSerif-Regular.ttf" type="font/ttf">
+
+  <link rel="stylesheet" type="text/css" media="all" href="/static/css/stylesheet.css"/>
+  <link rel="stylesheet" type="text/css" media="all" href="/static/css/grid.css"/>
+
+  {% if page.url == '/' %}
+      {% include "src/_includes/page/homepage/styles.njk" %} 
+  {% endif %}  
+  {% include "src/_includes/inline/styles.njk" %} 
+
+  {% include "src/_includes/partials/styles.njk" %} 
+
+  {% if _page_has_animatedcss_ %}
+    <link rel="stylesheet" type="text/css"  href="{{ _page_has_animatedcss_ }}">
+  {% endif %}
+
+  {% if _page_has_jquery_ %}
+    <script src="{{ _page_has_jquery_ }}"></script>
+  {% endif %}
+
+
+
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PVM7P6K');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- LuckyOrange Tag Manager -->
+  {# <script type='text/javascript'>
+  window.__lo_site_id = 262777;
+	(function() {
+		var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+		wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+	})();
+	</script> #}
+  <!-- End LuckyOrange Tag Manager -->
+
+
+
+</head>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVM7P6K"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->

@@ -1,0 +1,18 @@
+.form-landing {
+	width: 100%;
+	max-width: 768px;
+	margin: auto;
+	/* transition: height ease-in-out 0.3s !important; */
+}
+
+.form-landing input {
+	max-width: 80%;
+	margin-top: 16px !important;
+	margin: auto;
+}
+
+.form-landing input {
+	width: 100%;
+}
+
+

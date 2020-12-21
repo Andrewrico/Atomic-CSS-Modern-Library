@@ -1,0 +1,30 @@
+{% set css %}
+  {% include "./ui/align.css" %}
+  {% include "./ui/card.css" %}
+  {% include "./ui/backgrounds.css" %}
+  {% include "./ui/colors.css" %}
+  {% include "./ui/faq.css" %}
+  {% include "./ui/floating.css" %}
+  {% include "./ui/fonts.css" %}
+  {% include "./ui/helpers.css" %}
+  {% include "./ui/image.css" %}
+  {% include "./ui/link.css" %}
+  {% include "./ui/list.css" %}
+  {% include "./ui/note.css" %}
+  {% include "./ui/section.css" %}
+  {% include "./ui/stats.css" %}
+  {% include "./ui/text.css" %}
+  {% include "./ui/overlap.css" %}
+  {% include "./ui/visible.css" %}
+  {% include "./ui/typographic.css" %}
+
+  {% include "./header/header.css" %}
+  {% include "./footer/footer.css" %}
+  {% include "./form/form.css" %}
+  {% include "./button/button.css" %}
+  {% include "./lazyload/lazyload.css" %}
+  {% include "./observer/observer.css" %}
+{% endset %}
+<style>
+  {{ css | cssmin | safe }}
+</style>

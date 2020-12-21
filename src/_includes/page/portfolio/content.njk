@@ -1,0 +1,19 @@
+{# <section class="section">
+    <div class="grid columns-1 mxw-768"> 
+        <ul class="pappersheet">
+        {%- for promotion in collections.promotions -%} 
+            <li style="border-bottom:0.5px solid #dddd;padding:1rem;">
+                <a href="{{ promotion.url | url }}" title="promotion link">
+                    {{promotion.data.title}}
+                </a>
+                <br>
+                <small class="textColor-gray">
+                    {{promotion.data.description}}
+                </small>
+            </li>
+        {%- endfor -%} 
+        </ul> 
+    </div>
+</section> #}
+
+{{ content | safe }}

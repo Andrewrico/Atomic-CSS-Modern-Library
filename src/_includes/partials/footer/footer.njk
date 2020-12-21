@@ -1,0 +1,42 @@
+<footer>
+    <div class="grid columns-2 animated fadeInDow">
+        <nav>
+            <ul class="nav_footer">
+                {%- for compliance in collections.compliance -%}
+                <li>
+
+                    <a href="{{ compliance.url | url }}" aria-label="LINK">{{ compliance.data.title }}</a>
+                </li>
+                {%- endfor -%}
+            </ul>
+        </nav>
+        <small class="textColor-secondary copyright"> © <span id="currentYear"></span> Copyright {{ site.name }}. All Rights Reserved</small>
+    </div>
+</footer>
+
+<script>document.getElementById("currentYear").innerHTML = new Date().getFullYear();</script>
+
+<script src="/static/js/app.js" defer></script>
+
+{% include "src/_includes/inline/scripts.njk" %} 
+
+{% include "src/_includes/partials/scripts.njk" %} 
+
+{% if page.url == '/' %}
+    {% include "src/_includes/page/homepage/scripts.njk" %} 
+{% endif %}
+
+
+  
+<!-- Service-Worker -->
+{# <script>
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js');
+    });
+}
+</script> #}
+
+<!-- netlify-identity -->
+{# <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async defer></script> #}
+

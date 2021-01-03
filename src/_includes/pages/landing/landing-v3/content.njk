@@ -1,8 +1,0 @@
-{{ content | safe }}
-
-{% set js %}
-  {% include "./scripts.js" %}
-{% endset %}
-<script>
-  {{ js | jsmin | safe }}
-</script>

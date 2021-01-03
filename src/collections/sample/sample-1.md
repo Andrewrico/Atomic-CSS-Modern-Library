@@ -1,4 +1,0 @@
----
-tags: "name" 
-sitemapIgnore: true
----

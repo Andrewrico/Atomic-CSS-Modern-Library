@@ -1,5 +1,0 @@
-{
-  "layout": "layouts/base.njk",
-  "_page_has_jquery_": "/assets/js/jquery.js",
-  "_page_has_animatedcss_": "/assets/css/animated.css"
-}

@@ -1,0 +1,15 @@
+[build]
+  command = "npm run production"
+  publish = "dist"
+
+[template]
+  incoming-hooks = ["Contentful"]
+
+[template.environment]
+  SECRET_TOKEN = "https://app.netlify.com/start/deploy"
+  CUSTOM_LOGO = "https://www.netlify.com/img/deploy/button.svg"
+
+[[redirects]]
+    from = "*"
+    to = "/404"
+    status = 404

@@ -1,0 +1,713 @@
+:root {
+    --nav-item-color: #000;
+    --nav-item-color-active: var(--color-primary);
+}
+
+
+/*
+-what- backdrop
+-when- click the toggle buttton 
+-how- to activate backdrop
+*/
+#backdrop {
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    display: none;
+    background: rgba(0, 0, 0, .72);
+    z-index: 4900;
+    cursor: not-allowed
+}
+
+/*
+-what- dropdown
+-when- click the toggle buttton
+-how- to activate backdrop 
+*/
+.nav_dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.nav_dropcontent {
+    display: none;
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    background: #fafafa;
+    box-shadow: var(--box-shadow-2);
+    z-index: 1;
+    transition: opacity ease-out;
+    animation: fadeIn ease-in 0.3s;
+    transition-delay: 0.5s;
+}
+
+@media(min-width:1024px) {
+    .nav_dropcontent {
+        width: 25%;
+    }
+}
+
+.nav_dropdown:hover .nav_navbar-link {
+    color: var(--color-primary);
+    /* border-bottom: 2px solid var(--nav-item-color-active) !important; */
+}
+
+.nav_dropdown:hover .nav_navbar-link>svg {
+    fill: var(--nav-item-color-active) !important;
+}
+
+.nav_dropdown .nav_navbar-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    color: var(--color-black);
+
+
+}
+
+.nav_dropcontent a {
+    float: none;
+    color: var(--nav-item-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.nav_dropcontent a:hover {
+    background-color: var(--color-primary-rbga);
+}
+
+.nav_dropdown:hover .nav_dropcontent {
+    display: block;
+}
+
+
+/*
+-what- topbar
+-when- click the toggle buttton
+-how- to activate backdrop 
+*/
+#nav_topbar {
+    background-color: var(--color-primary);
+    display: none;
+}
+
+@media(min-width:1366px) {
+    #nav_topbar {
+        display: block;
+    }
+}
+
+.nav_topbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin: auto;
+    padding: 6px 0px;
+
+    max-width: var(--max-width-navigation);
+}
+
+.nav_topbar-menu:nth-child(1),
+.nav_topbar-menu:nth-child(2) {
+    margin-left: 16px !important;
+    margin-right: auto !important;
+}
+
+.nav_topbar-menu {
+    display: flex;
+    align-items: center;
+    /* flex-direction: column; */
+    margin: 0;
+    padding: 0;
+    /* margin-left: 3rem !important; */
+    list-style: none;
+}
+
+@media(min-width:1268px) {
+    .nav_topbar-menu {
+        flex-direction: row;
+    }
+
+    .nav_topbar-menu:nth-child(1),
+    .nav_topbar-menu:nth-child(2) {
+        margin-left: 0px !important;
+        margin-right: auto !important;
+    }
+
+}
+
+.nav_topbar-menu li a,
+.nav_topbar-menu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_topbar-menu a,
+.nav_topbar-menu li {
+    color: var(--color-light);
+    font-size: 14.5px;
+}
+
+
+
+
+.nav_topbar-menu.item_space-1 li {
+    margin-left: 16px;
+}
+
+.nav_topbar-menu.item_space-2 li {
+    margin-left: 32px;
+}
+
+
+
+.topbar_itemspacer {
+    display: block;
+    width: 1px;
+    margin: 0 16px;
+    height: 100%;
+    min-height: 10px;
+    background: var(--color-white);
+}
+
+
+[class*="topbar_button-"] {
+    min-width: 200px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    padding: 4px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+
+}
+
+.topbar_button-call {
+    border: 1px solid var(--color-orange);
+    font-family: var(--font-family-3);
+    background: var(--color-orange);
+    color: var(--color-white);
+}
+
+.topbar_button-inverted-white {
+    font-family: var(--font-family-2);
+    border: 1px solid var(--color-white);
+    background: transparent;
+    color: var(--color-white);
+}
+
+[class*="nav_"] p {
+    padding: 0;
+}
+
+[class*="nav_"] ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/*
+-what- navbar
+-when- click the toggle buttton
+-how- to activate backdrop 
+*/
+.nav_navbar-responsive {
+    -webkit-box-shadow: 0 7px 5px -7px #111;
+    box-shadow: 0 7px 5px -7px #111;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 4800;
+    top: 0;
+    position: relative;
+    transition: ease 300ms;
+    padding: 16px 0px;
+
+}
+
+/* @media(min-width:1024px) {
+    .nav_navbar-responsive {
+        position: fixed;
+
+    }
+} */
+
+.nav_navbar-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /* margin-right: 48px; */
+    /* margin-left: 48px; */
+    max-width: var(--max-width-navigation);
+    width: 100%;
+    margin: auto;
+}
+
+.nav_navbar-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav_navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+@media(min-width:1024px) {
+    .nav_navbar-right {
+        justify-content: flex-end;
+    }
+}
+
+#nav_brand {
+    /* padding: 16px 0px; */
+    transition: ease all .3s;
+}
+
+/*
+-what- brand
+-when- click the toggle buttton
+-how- to activate backdrop 
+*/
+.nav_navbar-brand {
+    width: 100%;
+    transition: ease all .3s;
+
+}
+
+.nav_navbar-title {
+    font-size: 14.5px;
+    font-family: var(--font-family-2);
+}
+
+.nav_navbar-logo {
+    /* width: 100px; */
+    object-fit: cover;
+}
+
+
+/*
+-what- toggle
+-when- click the toggle buttton
+-how- to activate backdrop 
+*/
+.nav_navbar-toggle {
+    min-width: 100%;
+    min-height: 100%;
+    cursor: pointer;
+    -ms-touch-action: auto;
+    touch-action: auto;
+    border: 0;
+    text-decoration: none;
+    color: #666;
+    -webkit-tap-highlight-color: #0000;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: .1s;
+    transition-duration: .1s;
+}
+
+
+/*
+-what- menus / items / links
+-when- click the toggle buttton
+-how- to activate backdrop 
+*/
+ul.nav_navbar-menu {
+    min-width: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+li.nav_navbar-item {
+    margin: 0;
+    padding: 0;
+    margin-left: 2rem;
+}
+
+.nav_navbar-link {
+    display: inline-block;
+    cursor: pointer;
+    padding: 16px 0;
+    border-bottom: 2px solid transparent;
+    outline: none;
+    background-color: transparent;
+    margin: 0;
+    transition: ease all 1s;
+    color: var(--nav-item-color);
+    font-weight: 100;
+    font-size: 16px;
+    font-family: var(--font-family-3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media(min-width: 1024px) {
+    .nav_navbar-link {
+        font-size: 17px;
+    }
+}
+
+@media(min-width: 1268px) {
+    .nav_navbar-link {
+        font-size: 24px;
+    }
+}
+
+.nav_navbar-link:hover {
+    color: var(--nav-item-color-active);
+    transition: all 1s;
+    border-bottom: 2px solid var(--nav-item-color-active);
+}
+
+.nav_navbar-link:hover svg {
+    fill: var(--nav-item-color-active);
+}
+
+.nav_navbar-link svg {
+    width: 12px;
+    height: 12px;
+    margin-left: 8px;
+    fill: var(--nav-item-color);
+}
+
+/*
+-what- responsive menu layout
+-when- click the toggle buttton
+-how- to activate backdrop 
+*/
+@media(max-width:1024px) {
+    .nav_navbar-toggle {
+        display: inline-flex;
+    }
+
+    .nav_navbar-menu {
+        display: none;
+    }
+}
+
+@media(min-width:1024px) {
+    .nav_navbar-toggle {
+        display: none !important;
+    }
+
+    .nav_navbar-menu {
+        display: inline-flex;
+    }
+}
+
+
+
+
+
+
+/*
+-what- drawer
+-when- click the toggle buttton
+-how- to activate backdrop 
+*/
+
+.nav_navbar #open-drawer,
+.nav_drawer #close-drawer {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    -ms-touch-action: auto;
+    touch-action: auto;
+    background: #e1e1e1;
+    border: 0;
+    text-decoration: none;
+    color: #666;
+    -webkit-tap-highlight-color: #0000;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: .1s;
+    transition-duration: .1s;
+}
+
+.nav_navbar #open-drawer:before,
+.nav_drawer #close-drawer:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.208);
+    border-radius: 100%;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+}
+
+
+.nav_navbar #open-drawer,
+.nav_drawer #close-drawer {
+    z-index: 10;
+    width: 60px;
+    height: 60px;
+    -ms-touch-action: auto;
+    touch-action: auto;
+    background: 0 0;
+    border-radius: 50%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    outline: 0;
+}
+
+#close-drawer {
+    /* background: var(--color-gray, gray) */
+}
+
+.nav_navbar #open-drawer:active:before,
+.nav_navbar #open-drawer:focus:before,
+.nav_navbar #open-drawer:hover:before,
+.nav_drawer #close-drawer:active:before,
+.nav_drawer #close-drawer:focus:before,
+.nav_drawer #close-drawer:hover:before {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    /* background: rgba(0, 0, 0, 0.208); */
+}
+
+
+
+
+
+/*
+DRAWER
+*/
+#drawer {
+    background: var(--color-light);
+    height: 100%;
+    width: 0;
+    max-width: 100%;
+    position: fixed;
+    z-index: 5000;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    -webkit-transition: all .2s;
+    transition: all .2s
+}
+
+.nav_drawer-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px;
+    width: 100%;
+}
+
+.nav_drawer-brand {
+    padding: 8px;
+    font-family: var(--font-family-2);
+}
+
+.nav_drawer-logo {
+    width: 100px;
+    object-fit: cover;
+}
+
+.nav_drawer-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0;
+}
+
+.nav_drawer-item {
+    width: auto;
+    margin: 4px 0;
+    padding: 1rem;
+}
+
+
+
+
+.nav_drawer-link {
+    display: inline-block;
+    cursor: pointer;
+    padding: 1px 0;
+    border-bottom: 2px solid transparent;
+    outline: none;
+    background-color: transparent;
+    margin: 0;
+    transition: ease all 1s;
+    color: var(--nav-item-color);
+    font-weight: 100;
+    font-size: 16px;
+    font-family: var(--font-family-3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav_drawer-link:hover {
+    color: var(--nav-item-color-active);
+    transition: all 1s;
+    border-bottom: 2px solid var(--nav-item-color-active);
+}
+
+#drawer::-webkit-scrollbar {
+    width: .5em
+}
+
+#drawer::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .46)
+}
+
+#drawer::-webkit-scrollbar-thumb {
+    background-color: #000;
+    outline: 1px solid #000;
+}
+
+
+
+
+/*TOGGLES2*/
+#open-drawer,
+#close-drawer {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    -ms-touch-action: auto;
+    touch-action: auto;
+    background: #e1e1e1;
+    border: 0;
+    text-decoration: none;
+    color: #666;
+    -webkit-tap-highlight-color: #0000;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: .1s;
+    transition-duration: .1s;
+    z-index: 10;
+    width: 60px;
+    height: 60px;
+    -ms-touch-action: auto;
+    touch-action: auto;
+    background: 0 0;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    outline: 0;
+}
+
+#close-drawer:before,
+#open-drawer:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 117, 111, 0.208);
+    border-radius: 100%;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+}
+
+#close-drawer {
+    margin-right: auto;
+    background: var(--color-tertiary, gray)
+}
+
+#open-drawer:active:before,
+#open-drawer:focus:before,
+#open-drawer:hover:before,
+#close-drawer:active:before,
+#close-drawer:focus:before,
+#close-drawer:hover:before {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    background: rgba(0, 0, 0, 0.208);
+}
+
+#open-drawer>svg,
+#close-drawer>svg {
+    fill: #000;
+    width: 24px;
+    height: 24px;
+}
+
+
+
+
+
+a[id='page-{{id}}'] { 
+    color: var(--color-primary)!important;
+    transition: all 1s;
+    border-bottom: 2px solid var(--color-primary)!important;
+}
+
+a[id='skillset-{{ url_id }}'] { 
+    color: var(--color-primary)!important;
+    transition: all 1s;
+}

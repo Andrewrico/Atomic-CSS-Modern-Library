@@ -1,0 +1,49 @@
+{
+  "BRANDS": [{
+      "SRC": "/images/landings/seal2.jpg",
+      "META": "Personal Loans - Secured Transaction"
+    },
+    {
+      "SRC": "/images/landings/siteseal.gif",
+      "META": "Personal Loans - Secured Transaction"
+    }
+  ],
+
+
+
+
+  "STATS": [{
+      "SRC": "/images/banner-agency.jpg",
+      "META": "Agency"
+    },
+    {
+      "SRC": "/images/banner-projects.jpg",
+      "META": "Projects"
+    },
+    {
+      "SRC": "/images/banner-solutions.jpg",
+      "META": "Solutions"
+    },
+    {
+      "SRC": "/images/banner-industries.jpg",
+      "META": "Industries"
+    }
+  ],
+  "GALLERY": [{
+      "SRC": "/images/banner-agency.jpg",
+      "META": "Agency"
+    },
+    {
+      "SRC": "/images/banner-projects.jpg",
+      "META": "Projects"
+    },
+    {
+      "SRC": "/images/banner-solutions.jpg",
+      "META": "Solutions"
+    },
+    {
+      "SRC": "/images/banner-industries.jpg",
+      "META": "Industries"
+    }
+  ]
+}

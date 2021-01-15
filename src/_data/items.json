@@ -1,0 +1,41 @@
+{
+    "affiliates": [{
+        "name": "MaxBounty",
+        "url": "https://maxbounty.com/"
+      }
+      ,
+      {
+        "name": "Adwork Media",
+        "url": "https://www.adworkmedia.com/"
+      }
+      ,
+      {
+        "name": "CPA GRIP",
+        "url": "https://www.cpagrip.com/"
+      },
+      {
+        "name": "CPA LEAD",
+        "url": "https://www.cpalead.com/"
+      }
+      ,
+      {
+        "name": "Click Bank",
+        "url": "https://www.clickbank.com/"
+      }
+      ,
+      {
+        "name": "DigiStore24",
+        "url": "https://www.digistore24.com/"
+      }
+      ,
+      {
+        "name": "Perform CB",
+        "url": "https://www.performcb.com/"
+      }
+      ,
+      {
+        "name": "DoAff",
+        "url": "https://www.doaffiliate.net/"
+      }
+    ]
+  }

@@ -5,14 +5,6 @@
 }
 
 :root {
-	overflow-x: hidden;
-	scroll-behavior: smooth;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-	line-height: 1.6;
-	font-size: 14.5px;
 	--atomic-primary: #6495ED;
 	--atomic-secondary: #8A2BE2;
 	--atomic-tertiary: #8FBC8F;
@@ -221,6 +213,7 @@
 	--atomic-80pct: 80%;
 	--atomic-90pct: 90%;
 	--atomic-100pct: 100%;
+	--atomic-80vh: 80vh;
 	--atomic-100vh: 100vh;
 	--atomic-solid: solid;
 	--atomic-dotted: dotted;
@@ -248,107 +241,11 @@
 	--atomic-box-shadow-9: 1rem 3rem rgba(0,0,0,.175);
 	--atomic-box-shadow-10:0 2px 2px 0 rgba(0,0,0,0.14), 
 	0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
-	font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
 }
 
-pre span {
-	-webkit-user-select: var(--atomic-none);
-	-moz-user-select: var(--atomic-none);
-	user-select: var(--atomic-none);
-}
-summary { 
-	cursor: pointer;
-	padding: 3rem 0;
-	border-bottom: 1px solid rgb(215, 215, 215);
-}
-details[open] summary ~ * {
-	animation: open .5s ease-in-out;}
-	@keyframes open {
-	0% {opacity: 0; margin-left: -20px}
-	100% {opacity: 1; margin-left: 0px}
-}
 
-[class*="Bt"] {
-	display: var(--atomic-inline-block);
-	color: var(--atomic-dark);
-	text-decoration: var(--atomic-none);
-	cursor: var(--atomic-pointer);
-	-webkit-user-select: var(--atomic-none);
-	-moz-user-select: var(--atomic-none);
-	user-select: var(--atomic-none);
-	background-color: var(--atomic-transparent);
-	border: var(--atomic-solid-1px) var(--atomic-transparent);
-	padding: var(--atomic-8px);
-	border-radius: var(--atomic-4px);
-	background-color: var(--atomic-background-color);
-	color: var(--atomic-white);
-	transition: var(--atomic-all) var(--atomic-ease-in-out) var(--atomic-15-s);
-} 
-
-.I\(c\) {
-	display: var(--atomic-grid);
-	place-items: var(--atomic-center);
-	justify-content: var(--atomic-center);
-	align-items: var(--atomic-center);
-	text-align: var(--atomic-center);
-	margin: var(--atomic-auto);
-} 
-
-.F\(c\) {
-	display: var(--atomic-flex);
-	justify-content: var(--atomic-center);
-	align-items: var(--atomic-center);
-} 
-.F\(cw\) {
-	display: var(--atomic-flex);
-	justify-content: var(--atomic-center);
-	align-items: var(--atomic-center);
-	flex-wrap: var(--atomic-wrap);
-} 
-
-.F\(sb\) {
-	display: var(--atomic-flex);
-	justify-content: var(--atomic-space-between);
-	align-items: var(--atomic-center);
-} 
-.F\(sa\) {
-	display: var(--atomic-flex);
-	justify-content: var(--atomic-space-around);
-	align-items: var(--atomic-center);
-} 
-
-.G\(c\)  {
-	display: var(--atomic-grid);
-	place-items: var(--atomic-center);
-} 
-
-
-.F\(row\) {
-	display: var(--atomic-flex);
-	flex-direction: var(--atomic-column);
-	flex-wrap: var(--atomic-wrap);
-	width: var(--atomic-100pct) }
-	@media (min-width: 1024px) { 
-		.F\(row\) { flex-direction: var(--atomic-row) } 
-}
-
-.F\(column\),
-.F\(colspan\) {
-	padding:var(--atomic-0) var(--atomic-1rem);
-	display: var(--atomic-flex);
-	flex-direction: var(--atomic-column);
-	flex-basis: var(--atomic-100pct);
-	flex: var(--atomic-1) }
-	.F\(colspan\) { 
-		flex:var(--atomic-2) 
- }
-
-[class*="Hr("]  { 
-	margin-top: 64px;
-	margin-bottom: 64px;
-	border: 2px solid transparent;
-	border-image: url(/images/hr.svg) 30 stretch;
- } 
+[class*="Hr("]  		{ border: var(--atomic-border) }			
 	.Hr\(orange\)       { --atomic-border: var(--atomic-solid-05px) var(--atomic-orange) }
 	.Hr\(blue\)         { --atomic-border: var(--atomic-solid-05px) var(--atomic-blue) }
 	.Hr\(green\)        { --atomic-border: var(--atomic-solid-05px) var(--atomic-green) }
@@ -391,7 +288,7 @@ details[open] summary ~ * {
 	.Bg\(cyan\)         { --atomic-background-color: var(--atomic-cyan) }
 	.Bg\(blue\)         { --atomic-background-color: var(--atomic-blue) }
 	.Bg\(indigo\)       { --atomic-background-color: var(--atomic-indigo) }	
-	.Bg\(lavender\)     { --atomic-background-color: var(--atomic-lavender) }	
+	.Bg\(lavendem\)     { --atomic-background-color: var(--atomic-lavender) }	
 	.Bg\(violet\)       { --atomic-background-color: var(--atomic-violet) }
 	.Bg\(purple\)       { --atomic-background-color: var(--atomic-purple) }
 	.Bg\(pink\)         { --atomic-background-color: var(--atomic-pink) }
@@ -430,7 +327,7 @@ details[open] summary ~ * {
 	.C\(cyan\)         { --atomic-color: var(--atomic-cyan) }
 	.C\(blue\)         { --atomic-color: var(--atomic-blue) }
 	.C\(indigo\)       { --atomic-color: var(--atomic-indigo) }
-	.C\(lavender\)     { --atomic-color: var(--atomic-lavender) }	
+	.C\(lavendem\)     { --atomic-color: var(--atomic-lavender) }	
 	.C\(violet\)       { --atomic-color: var(--atomic-violet) }
 	.C\(purple\)       { --atomic-color: var(--atomic-purple) }
 	.C\(pink\)         { --atomic-color: var(--atomic-pink) }
@@ -451,9 +348,9 @@ details[open] summary ~ * {
 	.D\(block\) 		{ --atomic-display: var(--atomic-block) }
 	.D\(grid\) 			{ --atomic-display: var(--atomic-grid) }
 
-[class*="Fwr("]			{ flex-wrap: var(--atomic-flex-wrap) }
-	.Fwr\(nowrap\) 		{ --atomic-flex-wrap: var(--atomic-nowrap) }
-	.Fwr\(wrap\) 		{ --atomic-flex-wrap: var(--atomic-wrap) }
+[class*="Fp("]			{ flex-wrap: var(--atomic-flex-wrap) }
+	.Fp\(nowrap\) 		{ --atomic-flex-wrap: var(--atomic-nowrap) }
+	.Fp\(wrap\) 		{ --atomic-flex-wrap: var(--atomic-wrap) }
 
 [class*="Fd("]		    { flex-direction: var(--atomic-flex-direction) }
 	.Fd\(col\) 		    { --atomic-flex-direction:var(--atomic-column) }
@@ -482,42 +379,42 @@ details[open] summary ~ * {
 	.Fl\(100\%\) 	 	{ --atomic-flex: var(--atomic-100pct) }
 
 [class*="Fs("] 			{ font-size: var(--atomic-font-size) }
-	.Fs\(12p\) 			{ --atomic-font-size: var(--atomic-12px) }
-	.Fs\(12\.5p\) 		{ --atomic-font-size: var(--atomic-12-5px) }
-	.Fs\(13p\) 			{ --atomic-font-size: var(--atomic-13px) }
-	.Fs\(13\.5p\) 		{ --atomic-font-size: var(--atomic-13-5px) }
-	.Fs\(14p\) 			{ --atomic-font-size: var(--atomic-14px) }
-	.Fs\(14\.5p\) 		{ --atomic-font-size: var(--atomic-14-5px) }
-	.Fs\(15p\) 			{ --atomic-font-size: var(--atomic-15px) }
-	.Fs\(15\.5p\) 		{ --atomic-font-size: var(--atomic-15-5px) }
-	.Fs\(16p\) 			{ --atomic-font-size: var(--atomic-16px) }
-	.Fs\(16\.5p\) 		{ --atomic-font-size: var(--atomic-16-5px) }
-	.Fs\(17p\) 			{ --atomic-font-size: var(--atomic-17px) }
-	.Fs\(17\.5p\) 		{ --atomic-font-size: var(--atomic-17-5px) }
-	.Fs\(18p\) 			{ --atomic-font-size: var(--atomic-18px) }
-	.Fs\(18\.5p\) 		{ --atomic-font-size: var(--atomic-18-5px) }
-	.Fs\(19p\) 			{ --atomic-font-size: var(--atomic-19px) }
-	.Fs\(19\.5p\) 		{ --atomic-font-size: var(--atomic-19-5px) }
-	.Fs\(20p\) 			{ --atomic-font-size: var(--atomic-20px) }
-	.Fs\(20\.5p\) 		{ --atomic-font-size: var(--atomic-20-5px) }
-	.Fs\(21p\) 			{ --atomic-font-size: var(--atomic-21px) }
-	.Fs\(21\.5p\) 		{ --atomic-font-size: var(--atomic-21-5px) }
-	.Fs\(22p\) 			{ --atomic-font-size: var(--atomic-22px) }
-	.Fs\(22\.5p\) 		{ --atomic-font-size: var(--atomic-22-5px) }
-	.Fs\(23p\) 			{ --atomic-font-size: var(--atomic-23px) }
-	.Fs\(23\.5p\) 		{ --atomic-font-size: var(--atomic-23-5px) }
-	.Fs\(24p\) 			{ --atomic-font-size: var(--atomic-24px) }
-	.Fs\(32p\) 			{ --atomic-font-size: var(--atomic-32px) }
-	.Fs\(1r\) 			{ --atomic-font-size: var(--atomic-1rem) }
-	.Fs\(2r\) 			{ --atomic-font-size: var(--atomic-2rem) }
-	.Fs\(3r\) 			{ --atomic-font-size: var(--atomic-3rem) }
-	.Fs\(4r\) 			{ --atomic-font-size: var(--atomic-4rem) }
-	.Fs\(5r\) 			{ --atomic-font-size: var(--atomic-5rem) }
-	.Fs\(6r\) 			{ --atomic-font-size: var(--atomic-6rem) }
-	.Fs\(7r\) 			{ --atomic-font-size: var(--atomic-7rem) }
-	.Fs\(8r\) 			{ --atomic-font-size: var(--atomic-8rem) }
-	.Fs\(9r\) 			{ --atomic-font-size: var(--atomic-9rem) }
-	.Fs\(10r\) 			{ --atomic-font-size: var(--atomic-10rem) }
+	.Fs\(12x\) 			{ --atomic-font-size: var(--atomic-12px) }
+	.Fs\(12\.5x\) 		{ --atomic-font-size: var(--atomic-12-5px) }
+	.Fs\(13x\) 			{ --atomic-font-size: var(--atomic-13px) }
+	.Fs\(13\.5x\) 		{ --atomic-font-size: var(--atomic-13-5px) }
+	.Fs\(14x\) 			{ --atomic-font-size: var(--atomic-14px) }
+	.Fs\(14\.5x\) 		{ --atomic-font-size: var(--atomic-14-5px) }
+	.Fs\(15x\) 			{ --atomic-font-size: var(--atomic-15px) }
+	.Fs\(15\.5x\) 		{ --atomic-font-size: var(--atomic-15-5px) }
+	.Fs\(16x\) 			{ --atomic-font-size: var(--atomic-16px) }
+	.Fs\(16\.5x\) 		{ --atomic-font-size: var(--atomic-16-5px) }
+	.Fs\(17x\) 			{ --atomic-font-size: var(--atomic-17px) }
+	.Fs\(17\.5x\) 		{ --atomic-font-size: var(--atomic-17-5px) }
+	.Fs\(18x\) 			{ --atomic-font-size: var(--atomic-18px) }
+	.Fs\(18\.5x\) 		{ --atomic-font-size: var(--atomic-18-5px) }
+	.Fs\(19x\) 			{ --atomic-font-size: var(--atomic-19px) }
+	.Fs\(19\.5x\) 		{ --atomic-font-size: var(--atomic-19-5px) }
+	.Fs\(20x\) 			{ --atomic-font-size: var(--atomic-20px) }
+	.Fs\(20\.5x\) 		{ --atomic-font-size: var(--atomic-20-5px) }
+	.Fs\(21x\) 			{ --atomic-font-size: var(--atomic-21px) }
+	.Fs\(21\.5x\) 		{ --atomic-font-size: var(--atomic-21-5px) }
+	.Fs\(22x\) 			{ --atomic-font-size: var(--atomic-22px) }
+	.Fs\(22\.5x\) 		{ --atomic-font-size: var(--atomic-22-5px) }
+	.Fs\(23x\) 			{ --atomic-font-size: var(--atomic-23px) }
+	.Fs\(23\.5x\) 		{ --atomic-font-size: var(--atomic-23-5px) }
+	.Fs\(24x\) 			{ --atomic-font-size: var(--atomic-24px) }
+	.Fs\(32x\) 			{ --atomic-font-size: var(--atomic-32px) }
+	.Fs\(1m\) 			{ --atomic-font-size: var(--atomic-1rem) }
+	.Fs\(2m\) 			{ --atomic-font-size: var(--atomic-2rem) }
+	.Fs\(3m\) 			{ --atomic-font-size: var(--atomic-3rem) }
+	.Fs\(4m\) 			{ --atomic-font-size: var(--atomic-4rem) }
+	.Fs\(5m\) 			{ --atomic-font-size: var(--atomic-5rem) }
+	.Fs\(6m\) 			{ --atomic-font-size: var(--atomic-6rem) }
+	.Fs\(7m\) 			{ --atomic-font-size: var(--atomic-7rem) }
+	.Fs\(8m\) 			{ --atomic-font-size: var(--atomic-8rem) }
+	.Fs\(9m\) 			{ --atomic-font-size: var(--atomic-9rem) }
+	.Fs\(10m\) 			{ --atomic-font-size: var(--atomic-10rem) }
 
 [class*="Fw("]			{ font-weight: var(--atomic-font-weight) }
 	.Fw\(100\) 			{ --atomic-font-weight: var(--atomic-100) }
@@ -540,6 +437,10 @@ details[open] summary ~ * {
 	.H\(100vh\)         { --atomic-height:var(--atomic-100vh) }
 	.H\(100\%\)         { --atomic-height:var(--atomic-100pct) }
 
+[class*="Mh("] 			{ min-height: var(--atomic-min-height) }
+	.Mh\(100vh\)         { --atomic-min-height:var(--atomic-100vh) }
+	.Mh\(80vh\)         { --atomic-min-height:var(--atomic-80vh) }
+
 [class*="Of("] 			{ object-fit: var(--atomic-object-fit) }
 	.Of\(cv\)         	{ --atomic-object-fit:var(--atomic-cover) }
 	.Of\(cn\)         	{ --atomic-object-fit:var(--atomic-contain) }
@@ -559,46 +460,46 @@ details[open] summary ~ * {
 
 [class*="P("]			{ padding: var(--atomic-padding) }
 	.P\(0\)				{ --atomic-padding: var(--atomic-0) }
-	.P\(1r\)			{ --atomic-padding: var(--atomic-1rem) }
-	.P\(2r\) 			{ --atomic-padding: var(--atomic-2rem) }
-	.P\(3r\)			{ --atomic-padding: var(--atomic-3rem) }
-	.P\(4r\)			{ --atomic-padding: var(--atomic-4rem) }
-	.P\(5r\) 			{ --atomic-padding: var(--atomic-5rem) }
-	.P\(6r\)			{ --atomic-padding: var(--atomic-6rem) }
-	.P\(7r\) 			{ --atomic-padding: var(--atomic-7rem) }
-	.P\(8r\)			{ --atomic-padding: var(--atomic-8rem) }
-	.P\(9r\)			{ --atomic-padding: var(--atomic-9rem) }
-	.P\(10r\) 			{ --atomic-padding: var(--atomic-10rem)}
-	.P\(1p\) 			{ --atomic-padding: var(--atomic-1px) }
-	.P\(2p\)			{ --atomic-padding: var(--atomic-2px) }
-	.P\(3p\)			{ --atomic-padding: var(--atomic-3px) }
-	.P\(4p\)			{ --atomic-padding: var(--atomic-4px) }
-	.P\(5p\)			{ --atomic-padding: var(--atomic-5px) }
-	.P\(6p\)			{ --atomic-padding: var(--atomic-6px) }
-	.P\(7p\) 			{ --atomic-padding: var(--atomic-7px) }
-	.P\(8p\)			{ --atomic-padding: var(--atomic-8px) }
-	.P\(9p\)			{ --atomic-padding: var(--atomic-9px) }
-	.P\(10p\)			{ --atomic-padding: var(--atomic-10px) }
-	.P\(11p\)			{ --atomic-padding: var(--atomic-11px) }
-	.P\(12p\)			{ --atomic-padding: var(--atomic-12px) }
-	.P\(13p\)			{ --atomic-padding: var(--atomic-13px) }
-	.P\(14p\)			{ --atomic-padding: var(--atomic-14px) }
-	.P\(15p\)			{ --atomic-padding: var(--atomic-15px) }
-	.P\(16p\) 			{ --atomic-padding: var(--atomic-16px) }
-	.P\(24p\)			{ --atomic-padding: var(--atomic-24px) }
-	.P\(32p\)			{ --atomic-padding: var(--atomic-32px) }
+	.P\(1m\)			{ --atomic-padding: var(--atomic-1rem) }
+	.P\(2m\) 			{ --atomic-padding: var(--atomic-2rem) }
+	.P\(3m\)			{ --atomic-padding: var(--atomic-3rem) }
+	.P\(4m\)			{ --atomic-padding: var(--atomic-4rem) }
+	.P\(5m\) 			{ --atomic-padding: var(--atomic-5rem) }
+	.P\(6m\)			{ --atomic-padding: var(--atomic-6rem) }
+	.P\(7m\) 			{ --atomic-padding: var(--atomic-7rem) }
+	.P\(8m\)			{ --atomic-padding: var(--atomic-8rem) }
+	.P\(9m\)			{ --atomic-padding: var(--atomic-9rem) }
+	.P\(10m\) 			{ --atomic-padding: var(--atomic-10rem)}
+	.P\(1x\) 			{ --atomic-padding: var(--atomic-1px) }
+	.P\(2x\)			{ --atomic-padding: var(--atomic-2px) }
+	.P\(3x\)			{ --atomic-padding: var(--atomic-3px) }
+	.P\(4x\)			{ --atomic-padding: var(--atomic-4px) }
+	.P\(5x\)			{ --atomic-padding: var(--atomic-5px) }
+	.P\(6x\)			{ --atomic-padding: var(--atomic-6px) }
+	.P\(7x\) 			{ --atomic-padding: var(--atomic-7px) }
+	.P\(8x\)			{ --atomic-padding: var(--atomic-8px) }
+	.P\(9x\)			{ --atomic-padding: var(--atomic-9px) }
+	.P\(10x\)			{ --atomic-padding: var(--atomic-10px) }
+	.P\(11x\)			{ --atomic-padding: var(--atomic-11px) }
+	.P\(12x\)			{ --atomic-padding: var(--atomic-12px) }
+	.P\(13x\)			{ --atomic-padding: var(--atomic-13px) }
+	.P\(14x\)			{ --atomic-padding: var(--atomic-14px) }
+	.P\(15x\)			{ --atomic-padding: var(--atomic-15px) }
+	.P\(16x\) 			{ --atomic-padding: var(--atomic-16px) }
+	.P\(24x\)			{ --atomic-padding: var(--atomic-24px) }
+	.P\(32x\)			{ --atomic-padding: var(--atomic-32px) }
 
 [class*="Pt("]			{ padding-top: var(--atomic-padding-top) }
 	.Pt\(0\) 			{ --atomic-padding-top: var(--atomic-0)	}
 
 [class*="Pt("]			{ padding-top: var(--atomic-padding-top) }
-	.Pt\(1r\) 			{ --atomic-padding-top: var(--atomic-1rem)	}
+	.Pt\(1m\) 			{ --atomic-padding-top: var(--atomic-1rem)	}
 
 [class*="Pb("]			{ padding-bottom: var(--atomic-padding-bottom) }
 	.Pb\(0\) 			{ --atomic-padding-bottom: var(--atomic-0)	}
 
 [class*="Pb("]			{ padding-bottom: var(--atomic-padding-bottom) }
-	.Pb\(1r\) 			{ --atomic-padding-bottom: var(--atomic-1rem)	}
+	.Pb\(1m\) 			{ --atomic-padding-bottom: var(--atomic-1rem)	}
 
 [class*="Lh("]			{ line-height: var(--atomic-line-height) }
 	.Lh\(1\) 			{ --atomic-line-height: var(--atomic-1) }
@@ -615,103 +516,103 @@ details[open] summary ~ * {
 [class*="M("]			{ margin: var(--atomic-margin) }
 	.M\(a\) 			{ --atomic-margin: var(--atomic-auto) }
 	.M\(0\)				{ --atomic-margin: var(--atomic-0) }
-	.M\(1r\)			{ --atomic-margin: var(--atomic-1rem) }
-	.M\(2r\)			{ --atomic-margin: var(--atomic-2rem) }
-	.M\(3r\)			{ --atomic-margin: var(--atomic-3rem) }
-	.M\(4r\)			{ --atomic-margin: var(--atomic-4rem) }
-	.M\(5r\)			{ --atomic-margin: var(--atomic-5rem) }
-	.M\(6r\)			{ --atomic-margin: var(--atomic-6rem) }
+	.M\(1m\)			{ --atomic-margin: var(--atomic-1rem) }
+	.M\(2m\)			{ --atomic-margin: var(--atomic-2rem) }
+	.M\(3m\)			{ --atomic-margin: var(--atomic-3rem) }
+	.M\(4m\)			{ --atomic-margin: var(--atomic-4rem) }
+	.M\(5m\)			{ --atomic-margin: var(--atomic-5rem) }
+	.M\(6m\)			{ --atomic-margin: var(--atomic-6rem) }
 
 [class*="Mt("]			{ margin-top: var(--atomic-margin-top) }
 	.Mt\(0\) 			{ --atomic-margin-top: var(--atomic-0)	}
 
 [class*="Mt("]			{ margin-top: var(--atomic-margin-top) }
-	.Mt\(1r\) 			{ --atomic-margin-top: var(--atomic-1rem)	}
+	.Mt\(1m\) 			{ --atomic-margin-top: var(--atomic-1rem)	}
 
 [class*="Mb("]			{ margin-bottom: var(--atomic-margin-bottom) }
 	.Mb\(0\) 			{ --atomic-margin-bottom: var(--atomic-0)	}
 
 [class*="Mb("]			{ margin-bottom: var(--atomic-margin-bottom) }
-	.Mb\(1r\) 			{ --atomic-margin-bottom: var(--atomic-1rem)	}
+	.Mb\(1m\) 			{ --atomic-margin-bottom: var(--atomic-1rem)	}
 
 
 [class*="Ml("]			{ margin-left: var(--atomic-margin-left) }
 	.Ml\(a\) 			{ --atomic-margin-left: var(--atomic-auto)	}
 	.Ml\(0\) 			{ --atomic-margin-left: var(--atomic-0)	}
-	.Ml\(1r\) 			{ --atomic-margin-left: var(--atomic-1rem)	}
-	.Ml\(2r\) 			{ --atomic-margin-left: var(--atomic-2rem)	}
-	.Ml\(3r\) 			{ --atomic-margin-left: var(--atomic-3rem)	}
-	.Ml\(4r\) 			{ --atomic-margin-left: var(--atomic-4rem)	}
-	.Ml\(5r\) 			{ --atomic-margin-left: var(--atomic-5rem)	}
-	.Ml\(6r\) 			{ --atomic-margin-left: var(--atomic-6rem)	}
+	.Ml\(1m\) 			{ --atomic-margin-left: var(--atomic-1rem)	}
+	.Ml\(2m\) 			{ --atomic-margin-left: var(--atomic-2rem)	}
+	.Ml\(3m\) 			{ --atomic-margin-left: var(--atomic-3rem)	}
+	.Ml\(4m\) 			{ --atomic-margin-left: var(--atomic-4rem)	}
+	.Ml\(5m\) 			{ --atomic-margin-left: var(--atomic-5rem)	}
+	.Ml\(6m\) 			{ --atomic-margin-left: var(--atomic-6rem)	}
 
 [class*="Mr("]			{ margin-right: var(--atomic-margin-right) }
 	.Mr\(a\) 			{ --atomic-margin-right: var(--atomic-auto) }
 	.Mr\(0\)			{ --atomic-margin-right: var(--atomic-0) }
-	.Mr\(1r\)			{ --atomic-margin-right: var(--atomic-1rem) }
-	.Mr\(2r\)			{ --atomic-margin-right: var(--atomic-2rem) }
-	.Mr\(3r\)			{ --atomic-margin-right: var(--atomic-3rem) }
-	.Mr\(4r\)			{ --atomic-margin-right: var(--atomic-4rem) }
-	.Mr\(5r\)			{ --atomic-margin-right: var(--atomic-5rem) }
-	.Mr\(6r\)			{ --atomic-margin-right: var(--atomic-6rem) }
+	.Mr\(1m\)			{ --atomic-margin-right: var(--atomic-1rem) }
+	.Mr\(2m\)			{ --atomic-margin-right: var(--atomic-2rem) }
+	.Mr\(3m\)			{ --atomic-margin-right: var(--atomic-3rem) }
+	.Mr\(4m\)			{ --atomic-margin-right: var(--atomic-4rem) }
+	.Mr\(5m\)			{ --atomic-margin-right: var(--atomic-5rem) }
+	.Mr\(6m\)			{ --atomic-margin-right: var(--atomic-6rem) }
 
 [class*="Mnh"]			{ min-height: var(--atomic-min-height) }
-	.Mnh\(300p\) 		{ --atomic-min-height: var(--atomic-300px) }
+	.Mnh\(300x\) 		{ --atomic-min-height: var(--atomic-300px) }
 
 [class*="Mnw"]			{ min-width: var(--atomic-min-width) }
 	.Mnw\(0\) 			{ --atomic-min-width: var(--atomic-0) }
-	.Mnw\(10p\)			{ --atomic-min-width: var(--atomic-10px) }
-	.Mnw\(16p\)			{ --atomic-min-width: var(--atomic-16px) }
-	.Mnw\(24p\)			{ --atomic-min-width: var(--atomic-24px) }
-	.Mnw\(32p\)			{ --atomic-min-width: var(--atomic-32px) }
-	.Mnw\(48p\)			{ --atomic-min-width: var(--atomic-48px) }
-	.Mnw\(56p\)			{ --atomic-min-width: var(--atomic-56px) }
-	.Mnw\(64p\)			{ --atomic-min-width: var(--atomic-64px) }
-	.Mnw\(70p\)			{ --atomic-min-width: var(--atomic-70px) }
-	.Mnw\(80p\)			{ --atomic-min-width: var(--atomic-80px) }
-	.Mnw\(90p\)			{ --atomic-min-width: var(--atomic-90px) }
-	.Mnw\(100p\)		{ --atomic-min-width: var(--atomic-100px) }
-	.Mnw\(150p\)		{ --atomic-min-width: var(--atomic-150px) }
-	.Mnw\(200p\)		{ --atomic-min-width: var(--atomic-200px) }
-	.Mnw\(250p\)		{ --atomic-min-width: var(--atomic-250px) }
-	.Mnw\(300p\)		{ --atomic-min-width: var(--atomic-300px) }
-	.Mnw\(350p\)		{ --atomic-min-width: var(--atomic-350px) }
+	.Mnw\(10x\)			{ --atomic-min-width: var(--atomic-10px) }
+	.Mnw\(16x\)			{ --atomic-min-width: var(--atomic-16px) }
+	.Mnw\(24x\)			{ --atomic-min-width: var(--atomic-24px) }
+	.Mnw\(32x\)			{ --atomic-min-width: var(--atomic-32px) }
+	.Mnw\(48x\)			{ --atomic-min-width: var(--atomic-48px) }
+	.Mnw\(56x\)			{ --atomic-min-width: var(--atomic-56px) }
+	.Mnw\(64x\)			{ --atomic-min-width: var(--atomic-64px) }
+	.Mnw\(70x\)			{ --atomic-min-width: var(--atomic-70px) }
+	.Mnw\(80x\)			{ --atomic-min-width: var(--atomic-80px) }
+	.Mnw\(90x\)			{ --atomic-min-width: var(--atomic-90px) }
+	.Mnw\(100x\)		{ --atomic-min-width: var(--atomic-100px) }
+	.Mnw\(150x\)		{ --atomic-min-width: var(--atomic-150px) }
+	.Mnw\(200x\)		{ --atomic-min-width: var(--atomic-200px) }
+	.Mnw\(250x\)		{ --atomic-min-width: var(--atomic-250px) }
+	.Mnw\(300x\)		{ --atomic-min-width: var(--atomic-300px) }
+	.Mnw\(350x\)		{ --atomic-min-width: var(--atomic-350px) }
 	.Mnw\(100\%\)		{ --atomic-min-width: var(--atomic-100pct) }
 
 [class*="Mxw("]			{ max-width: var(--atomic-max-width) }
 	.Mxw\(0\) 			{ --atomic-max-width: var(--atomic-0) }
-	.Mxw\(16p\) 		{ --atomic-max-width: var(--atomic-16px) }
-	.Mxw\(32p\) 		{ --atomic-max-width: var(--atomic-32px) }
-	.Mxw\(64p\) 		{ --atomic-max-width: var(--atomic-64px) }
-	.Mxw\(100p\)		{ --atomic-max-width: var(--atomic-100px) }
-	.Mxw\(150p\)		{ --atomic-max-width: var(--atomic-150px) }
-	.Mxw\(200p\)		{ --atomic-max-width: var(--atomic-200px) }
-	.Mxw\(250p\)		{ --atomic-max-width: var(--atomic-250px) }
-	.Mxw\(300p\)		{ --atomic-max-width: var(--atomic-300px) }
-	.Mxw\(350p\)		{ --atomic-max-width: var(--atomic-350px) }
-	.Mxw\(400p\)		{ --atomic-max-width: var(--atomic-400px) }
-	.Mxw\(450p\)		{ --atomic-max-width: var(--atomic-450px) }
-	.Mxw\(499p\)		{ --atomic-max-width: var(--atomic-499px) }
-	.Mxw\(768p\)		{ --atomic-max-width: var(--atomic-768px) }
-	.Mxw\(1024p\)		{ --atomic-max-width: var(--atomic-1024px) }
-	.Mxw\(1268p\)		{ --atomic-max-width: var(--atomic-1268px) }
-	.Mxw\(1366p\)		{ --atomic-max-width: var(--atomic-1366px) }
+	.Mxw\(16x\) 		{ --atomic-max-width: var(--atomic-16px) }
+	.Mxw\(32x\) 		{ --atomic-max-width: var(--atomic-32px) }
+	.Mxw\(64x\) 		{ --atomic-max-width: var(--atomic-64px) }
+	.Mxw\(100x\)		{ --atomic-max-width: var(--atomic-100px) }
+	.Mxw\(150x\)		{ --atomic-max-width: var(--atomic-150px) }
+	.Mxw\(200x\)		{ --atomic-max-width: var(--atomic-200px) }
+	.Mxw\(250x\)		{ --atomic-max-width: var(--atomic-250px) }
+	.Mxw\(300x\)		{ --atomic-max-width: var(--atomic-300px) }
+	.Mxw\(350x\)		{ --atomic-max-width: var(--atomic-350px) }
+	.Mxw\(400x\)		{ --atomic-max-width: var(--atomic-400px) }
+	.Mxw\(450x\)		{ --atomic-max-width: var(--atomic-450px) }
+	.Mxw\(499x\)		{ --atomic-max-width: var(--atomic-499px) }
+	.Mxw\(768x\)		{ --atomic-max-width: var(--atomic-768px) }
+	.Mxw\(1024x\)		{ --atomic-max-width: var(--atomic-1024px) }
+	.Mxw\(1268x\)		{ --atomic-max-width: var(--atomic-1268px) }
+	.Mxw\(1366x\)		{ --atomic-max-width: var(--atomic-1366px) }
 	.Mxw\(100\%\)		{ --atomic-max-width: var(--atomic-100pct) }
 
 [class*="Ta("] 			{ text-align: var(--atomic-text-align) }
 	.Ta\(c\)            { --atomic-text-align:var(--atomic-center) }
-	.Ta\(r\)            { --atomic-text-align:var(--atomic-right) }
+	.Ta\(m\)            { --atomic-text-align:var(--atomic-right) }
 	.Ta\(l\)            { --atomic-text-align:var(--atomic-left) }
 
 [class*="W("]			{ width: var(--atomic-width) }
 	.W\(0\)				{ --atomic-width: var(--atomic-0) }
-	.W\(16p\) 			{ --atomic-width: var(--atomic-16px) }
-	.W\(32p\) 			{ --atomic-width: var(--atomic-32px) }
-	.W\(64p\) 			{ --atomic-width: var(--atomic-64px) }
-	.W\(100p\)		    { --atomic-width: var(--atomic-100px) }
-	.W\(150p\)		    { --atomic-width: var(--atomic-150px) }
-	.W\(200p\)		    { --atomic-width: var(--atomic-200px) }
-	.W\(250p\)		    { --atomic-width: var(--atomic-250px) }
+	.W\(16x\) 			{ --atomic-width: var(--atomic-16px) }
+	.W\(32x\) 			{ --atomic-width: var(--atomic-32px) }
+	.W\(64x\) 			{ --atomic-width: var(--atomic-64px) }
+	.W\(100x\)		    { --atomic-width: var(--atomic-100px) }
+	.W\(150x\)		    { --atomic-width: var(--atomic-150px) }
+	.W\(200x\)		    { --atomic-width: var(--atomic-200px) }
+	.W\(250x\)		    { --atomic-width: var(--atomic-250px) }
 	.W\(10\%\)			{ --atomic-width: var(--atomic-10pct) }
 	.W\(20\%\)			{ --atomic-width: var(--atomic-20pct) }
 	.W\(30\%\)			{ --atomic-width: var(--atomic-30pct) }

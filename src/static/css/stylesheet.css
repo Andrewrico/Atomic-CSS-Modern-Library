@@ -1,0 +1,150 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    line-height: 1.6;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+
+pre span {
+    -webkit-user-select: var(--atomic-none);
+    -moz-user-select: var(--atomic-none);
+    user-select: var(--atomic-none);
+}
+
+summary {
+    cursor: pointer;
+    padding: 3rem 0;
+    border-bottom: 1px solid rgb(215, 215, 215);
+}
+
+details[open] summary~* {
+    animation: open .5s ease-in-out;
+}
+
+@keyframes open {
+    0% {
+        opacity: 0;
+        margin-left: -20px
+    }
+
+    100% {
+        opacity: 1;
+        margin-left: 0px
+    }
+}
+
+[class*="Bt"] {
+    display: var(--atomic-inline-block);
+    color: var(--atomic-dark);
+    text-decoration: var(--atomic-none);
+    cursor: var(--atomic-pointer);
+    -webkit-user-select: var(--atomic-none);
+    -moz-user-select: var(--atomic-none);
+    user-select: var(--atomic-none);
+    background-color: var(--atomic-transparent);
+    border: var(--atomic-solid-1px) var(--atomic-transparent);
+    padding: var(--atomic-8px);
+    border-radius: var(--atomic-4px);
+    background-color: var(--atomic-background-color);
+    color: var(--atomic-white);
+    transition: var(--atomic-all) var(--atomic-ease-in-out) var(--atomic-15-s);
+}
+
+.I\(c\) {
+    display: var(--atomic-grid);
+    place-items: var(--atomic-center);
+    justify-content: var(--atomic-center);
+    align-items: var(--atomic-center);
+    text-align: var(--atomic-center);
+    margin: var(--atomic-auto);
+}
+
+.F\(c\) {
+    display: var(--atomic-flex);
+    justify-content: var(--atomic-center);
+    align-items: var(--atomic-center);
+}
+
+.F\(cw\) {
+    display: var(--atomic-flex);
+    justify-content: var(--atomic-center);
+    align-items: var(--atomic-center);
+    flex-wrap: var(--atomic-wrap);
+}
+
+.F\(sb\) {
+    display: var(--atomic-flex);
+    justify-content: var(--atomic-space-between);
+    align-items: var(--atomic-center);
+}
+
+.F\(sa\) {
+    display: var(--atomic-flex);
+    justify-content: var(--atomic-space-around);
+    align-items: var(--atomic-center);
+}
+
+.G\(c\) {
+    display: var(--atomic-grid);
+    place-items: var(--atomic-center);
+}
+
+.F\(row\) {
+    padding: var(--atomic-0) var(--atomic-1rem);
+    display: var(--atomic-flex);
+    flex-direction: var(--atomic-column);
+    flex-wrap: var(--atomic-wrap);
+    width: var(--atomic-100pct)
+}
+
+@media (min-width: 1024px) {
+    .F\(row\) {
+        flex-direction: var(--atomic-row)
+    }
+}
+
+.F\(column\),
+.F\(colspan\) {
+    padding: var(--atomic-0) var(--atomic-1rem);
+    display: var(--atomic-flex);
+    flex-direction: var(--atomic-column);
+    flex-basis: var(--atomic-100pct);
+    flex: var(--atomic-1);
+    min-width:  var(--atomic-350px);
+}
+
+.F\(colspan\) {
+    flex: var(--atomic-2)
+}
+
+
+
+[class*="Hr("] {
+    margin-top: 64px;
+    margin-bottom: 64px;
+    border: 2px solid transparent;
+    border-image: url(/images/hr.svg) 30 stretch;
+}

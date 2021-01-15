@@ -1,0 +1,34 @@
+<footer class="col(-1) Bg(white)" style="border-top: #dddd solid 1px;">
+    <div class="G(c) H(100%)">
+        <small class="C(black) Pt(1r) Pb(1r)"> © <span id="currentYear"></span> Copyright {{ site.name }}. All Rights Reserved</small>
+    </div>
+</footer>
+
+<script>document.getElementById("currentYear").innerHTML = new Date().getFullYear();</script>
+
+<script src="/static/js/app.js" defer></script>
+
+{# {% include "src/_includes/inline/scripts.njk" %}  #}
+
+
+{# 
+{% include "src/_includes/partials/scripts.njk" %} 
+
+{% if page.url == '/' %}
+    {% include "src/_includes/page/homepage/scripts.njk" %} 
+{% endif %} #}
+
+
+  
+<!-- Service-Worker -->
+{# <script>
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js');
+    });
+}
+</script> #}
+
+<!-- netlify-identity -->
+{# <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async defer></script> #}
+

@@ -1,0 +1,13 @@
+{
+  "name": "www.atomic.com",
+  "tagline": "CSS Library",
+  "description": "www.atomic.com",
+  "introduction": "CSS Library",
+  "url": "https://www.atomic.com",
+  "faviconPath": "/images/favicon.ico",
+  "logoPath": "/images/logo.png",
+  "imgMetada": "© www.atomic.com",
+  "enableThirdPartyComments": false,
+  "maxPostsPerPage": 5
+}
+

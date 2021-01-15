@@ -1,0 +1,18 @@
+{
+  "items": [{
+      "text": "Getting Started",
+      "url": "/",
+      "external": false
+    },
+    {
+      "text": "Components",
+      "url": "/components",
+      "external": false
+    },
+    {
+      "text": "Classes",
+      "url": "/classes",
+      "external": false
+    }
+  ]
+}

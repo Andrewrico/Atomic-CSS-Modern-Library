@@ -1,0 +1,39 @@
+<head>
+  {% include "partials/global/metadata.njk" %}
+
+
+    <title>Atomicx</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/css/stylesheet.css">
+    <link rel="stylesheet" href="/static/css/grid.css">
+    <link rel="stylesheet" href="/static/css/atomicx-0.1.css">
+
+    
+  {% block head %}{% endblock %}
+  {# <link rel="preload" as="font" href="/fonts/OpenSans-Regular.ttf" type="font/ttf">
+  <link rel="preload" as="font" href="/fonts/ArchivoBlack-Regular.ttf" type="font/ttf" >
+  <link rel="preload" as="font" href="/fonts/BreeSerif-Regular.ttf" type="font/ttf">
+  <link rel="preload" href="/static/css/stylesheet.css" as="style">
+  <link rel="preload" href="/static/css/grid.css" as="style">
+  <link rel="preload" href="/static/css/atomic.css" as="style">
+  <link rel="stylesheet" type="text/css" media="all" href="/static/css/stylesheet.css"/>
+  <link rel="stylesheet" type="text/css" media="all" href="/static/css/grid.css"/>
+  <link rel="stylesheet" type="text/css" media="all" href="/static/css/atomic.css"/> #}
+  {# {% if page.url == '/' %}
+      {% include "src/_includes/page/homepage/styles.njk" %} 
+  {% endif %} 
+
+  {% include "src/_includes/inline/styles.njk" %} 
+
+  {% include "src/_includes/partials/styles.njk" %} 
+
+  {% if _page_has_animatedcss_ %}
+    <link rel="stylesheet" type="text/css"  href="{{ _page_has_animatedcss_ }}">
+  {% endif %}
+
+  {% if _page_has_jquery_ %}
+    <script src="{{ _page_has_jquery_ }}"></script>
+  {% endif %} #}
+</head>

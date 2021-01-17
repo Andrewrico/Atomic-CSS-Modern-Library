@@ -12,7 +12,7 @@
                 {% set currentAttribute = ' aria-current="page"' %}
             {% endif %}
             <li>
-                <a href="{{ item.url }}"{{ relAttribute | safe }}{{ currentAttribute | safe }}>{{ item.text }}</a>
+                <a  class="Fs(15x)" href="{{ item.url }}"{{ relAttribute | safe }}{{ currentAttribute | safe }}>{{ item.text }}</a>
             </li>
         {% endfor %}
         </ul>

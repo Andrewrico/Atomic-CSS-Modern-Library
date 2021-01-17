@@ -1,15 +1,35 @@
 {% extends 'layouts/theme.njk' %}
 {% set pageType = 'Page' %}
 {% block content %}
-
     <section>
       <div class="D(flex) Fp(wrap) Mxw(1024x)">
-        <div class="F(row) M(1m)"><h1>{{ title }}</h1></div>
-        <div class="F(column) M(1m)">Column</div>
-        <div class="F(colspan) M(1m)">Column</div>
+
+        <div class="F(row) Fd(col)">
+           <h1 class="M(0)">{{ title }}</h1> 
+        </div>
+
+        <div class="F(colspan)">
+          <p>{{ content | safe }}</p>
+          {% markdown '/src/_includes/page/homepage/introduction.md' %}
+          <hr>
+          {% markdown '/src/_includes/page/homepage/md.md' %}
+        </div>
+
+        <div class="F(column)">
+          <nav style="position:sticky;top:0; margin-left:auto;" aria-label="Secondary Menu"> 
+            <h3>Table of Content</h3>
+            <ul>
+            {% for item in navigation.items %}
+                <li>
+                    <a class="Fs(14x)"
+                    href="{{ item.url }}"}>{{ item.text }}</a>
+                </li>
+            {% endfor %}
+            </ul>
+          </nav>
+        </div>
+
       </div>
     </section>
-
 {% include "./assets.njk" %} 
 {% endblock %}
-{{ content | safe }}

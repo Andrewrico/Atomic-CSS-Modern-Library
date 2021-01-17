@@ -11,12 +11,12 @@
     "clean-css": "^4.2.3",
     "concurrently": "^4.1.0",
     "countup.js": "^2.0.5",
+    "eleventy-plugin-markdown-shortcode": "^1.1.0",
     "eleventy-plugin-youtube-embed": "^1.2.1",
     "html-minifier": "^4.0.0",
     "semver": "^6.3.0",
     "slugify": "^1.3.4",
-    "terser": "^4.6.7",
-    "typewriter-effect": "^2.13.1"
+    "terser": "^4.6.7"
   },
   "devDependencies": {
     "@erquhart/rollup-plugin-node-builtins": "^2.1.5",
@@ -31,11 +31,11 @@
     "rollup-plugin-node-resolve": "^5.0.3"
   },
   "scripts": {
-    "cms:precompile": "make-dir dist/admin && nunjucks-precompile src/_includes > dist/admin/templates.js -i \"\\.(njk|css|svg)$\"",
-    "cms:bundle": "rollup --config",
-    "start": "concurrently \"npm run cms:bundle -- --watch\" \"chokidar \\\"src/_includes/**\\\" -c \\\"npm run cms:precompile\\\"\" \"npm run serve\"",
-    "serve": "cross-env ELEVENTY_ENV=development npx eleventy --serve",
-    "production": "npm run cms:precompile && npm run cms:bundle && npx eleventy"
+    "build": "eleventy",
+    "watch": "eleventy --watch",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve",
+    "debug": "DEBUG=* eleventy"
   },
   "repository": {
     "type": "git",

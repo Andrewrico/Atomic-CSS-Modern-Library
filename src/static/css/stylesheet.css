@@ -27,6 +27,42 @@ img {
     max-width: 100%;
 }
 
+p {
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+	opacity: 0.9;
+}
+nav a {
+    font-size: 19px;
+    font-weight: 500;
+    color: #5b5959;
+}
+
+ul {
+	list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+	padding: 0;
+    margin: 0.5rem 0;
+}
+
+aside ul {
+	margin: 2rem 0;
+}
+
+aside ul li {
+    margin: 1rem 0;
+}
 
 pre span {
     -webkit-user-select: var(--atomic-none);
@@ -42,18 +78,6 @@ summary {
 
 details[open] summary~* {
     animation: open .5s ease-in-out;
-}
-
-@keyframes open {
-    0% {
-        opacity: 0;
-        margin-left: -20px
-    }
-
-    100% {
-        opacity: 1;
-        margin-left: 0px
-    }
 }
 
 [class*="Bt"] {
@@ -138,13 +162,4 @@ details[open] summary~* {
 
 .F\(colspan\) {
     flex: var(--atomic-2)
-}
-
-
-
-[class*="Hr("] {
-    margin-top: 64px;
-    margin-bottom: 64px;
-    border: 2px solid transparent;
-    border-image: url(/images/hr.svg) 30 stretch;
 }

@@ -2,17 +2,18 @@
 
 layout: "/page/homepage/content.njk"
 
-metaDesc: "Getting Started"
+metaDesc: "Quick Start"
 
-title: "Getting Started"
+title: "Quick Start"
 
-description: 'Getting Started'
+description: 'Quick Start'
 
-category: "Getting Started"
+category: "Quick Start"
 
 keywords: 
-    - Getting Started
+    - Quick Start
 
 permalink: "/"
 
 ---
+## Quick start Tutorial Index File

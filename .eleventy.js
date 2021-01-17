@@ -8,24 +8,31 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const markdownFilter = require('./src/filters/markdown-filter.js');
 const w3DateFilter = require('./src/filters/w3-date-filter.js');
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
+const parseTransform = require('./src/transforms/parse-transform.js');
 const CleanCSS = require("clean-css");
+const markdownIt = require("markdown-it");
+var markdownShortcode = require("eleventy-plugin-markdown-shortcode");
 
 module.exports = function (config) {
+  config.addPlugin(markdownShortcode, {
+    html: true,
+    njk: true,
+    linkify: true,
+  });
+
+  // Alias
   config.addLayoutAlias('homepage', 'page/homepage.njk');
+
+  // HTML min
   config.addTransform('htmlmin', htmlMinTransform);
+  config.addTransform('parse', parseTransform);
   
   // Passthrough
-  config.addPassthroughCopy("src/_includes");
-  // config.addPassthroughCopy("src/_includes/partials");
-  // config.addPassthroughCopy("src/_includes/inline");
-
   config.addPassthroughCopy("src/icons");
   config.addPassthroughCopy("src/fonts");
   config.addPassthroughCopy("src/images");
   config.addPassthroughCopy("src/static");
-
   config.addPassthroughCopy('src/robots.txt');
-  
   config.addPassthroughCopy('src/admin/config.yml');
   config.addPassthroughCopy('src/admin/previews.js');
   config.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');
@@ -48,6 +55,16 @@ module.exports = function (config) {
   config.addPlugin(embedYouTube);
   config.addPlugin(rssPlugin);
   config.addPlugin(syntaxHighlight);
+
+   /* Markdown Overrides */
+   let markdownLibrary = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true
+  })
+  config.setLibrary("md", markdownLibrary);
+
+  // BrowserSync
   config.setBrowserSyncConfig({
     callbacks: {
       ready: function (err, browserSync) {
@@ -76,17 +93,27 @@ module.exports = function (config) {
     return minified.code;
   });
 
-  // DIRS
+
+
+  // Directories
   return {
+    templateFormats: [
+      "md",
+      "njk",
+      "html"
+    ],
+    passthroughFileCopy: true,
+    htmlTemplateEngine: "njk",
+    markdownTemplateEngine: "html",
+    dataTemplateEngine: "njk",
+
     dir: {
       input: "src",
       output: "dist",
       data: "_data",
       includes: "_includes"
     },
-    passthroughFileCopy: true,
-    htmlTemplateEngine: "njk",
-    dataTemplateEngine: "njk",
-    templateFormats: ["html", "njk", "md", "css"]
+   
   };
+  
 };

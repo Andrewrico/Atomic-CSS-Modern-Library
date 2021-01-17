@@ -1,17 +1,22 @@
 {
   "items": [{
-      "text": "Getting Started",
+      "text": "Quick Start",
       "url": "/",
       "external": false
     },
     {
-      "text": "Components",
-      "url": "/components",
+      "text": "Atomic Phylosophy",
+      "url": "/atomic-phylosophy",
       "external": false
     },
     {
-      "text": "Classes",
-      "url": "/classes",
+      "text": "Guides",
+      "url": "/guides",
+      "external": false
+    },
+    {
+      "text": "Sheetcheat",
+      "url": "/sheetcheat",
       "external": false
     }
   ]

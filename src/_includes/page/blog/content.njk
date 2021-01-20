@@ -1,7 +1,29 @@
-<section class="section">
-    <div class="grid columns-1 mxw-768"> 
-        {% include "partials/post/post-list.njk" %}
+{% extends 'layouts/theme.njk' %}
+{% set pageType = 'Page' %}
+{% block content %}
+    <section>
+      <div class="D(flex) Fp(wrap) Mxw(1024x)">
+
+        <div class="F(colspan)">
+          {% include "partials/post/post-list.njk" %}
         {% include "partials/post/pagination.njk" %}
-    </div>
-</section>
-{{ content | safe }}
+        </div>
+
+        <div class="F(column)">
+          <nav class="P(1m)" style="position:sticky;top:0;" aria-label="Secondary Menu"> 
+            <h3>Table of Content</h3>
+            <ul>
+            {% for item in navigation.items %}
+                <li>
+                    <a class="Fs(14x)"
+                    href="{{ item.url }}"}>{{ item.text }}</a>
+                </li>
+            {% endfor %}
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+    </section>
+{% include "./assets.njk" %} 
+{% endblock %}

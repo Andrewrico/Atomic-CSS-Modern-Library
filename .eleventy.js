@@ -1,71 +1,68 @@
-const site = require('./src/_data/site.json');
-const fs = require("fs");
-const Terser = require("terser");
-const embedYouTube = require("eleventy-plugin-youtube-embed");
-const dateFilter = require('./src/filters/date-filter.js');
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const markdownFilter = require('./src/filters/markdown-filter.js');
-const w3DateFilter = require('./src/filters/w3-date-filter.js');
-const htmlMinTransform = require('./src/transforms/html-min-transform.js');
-const parseTransform = require('./src/transforms/parse-transform.js');
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const embedYouTube = require("eleventy-plugin-youtube-embed");
+const markdownShortcode = require("eleventy-plugin-markdown-shortcode");
+const fs = require("fs");
 const CleanCSS = require("clean-css");
 const markdownIt = require("markdown-it");
-var markdownShortcode = require("eleventy-plugin-markdown-shortcode");
+const Terser = require("terser");
+const site = require('./src/_data/site.json');
+const dateFilter = require('./src/filters/date-filter.js');
+const markdownFilter = require('./src/filters/markdown-filter.js');
+const w3DateFilter = require('./src/filters/w3-date-filter.js');
+// const parseTransform = require('./src/transforms/parse-transform.js');
 
-module.exports = function (config) {
-  config.addPlugin(markdownShortcode, {
-    html: true,
-    njk: true,
-    linkify: true,
-  });
+// const htmlMinTransform = require('./src/transforms/html-min-transform.js');
+module.exports = function (eleventyConfig) {
+
 
   // Alias
-  config.addLayoutAlias('homepage', 'page/homepage.njk');
-
+  eleventyConfig.addLayoutAlias('homepage', 'page/homepage.njk');
   // HTML min
-  config.addTransform('htmlmin', htmlMinTransform);
-  config.addTransform('parse', parseTransform);
-  
+  // eleventyConfig.addTransform('htmlmin', htmlMinTransform);
+  // eleventyConfig.addTransform('parse', parseTransform);
   // Passthrough
-  config.addPassthroughCopy("src/icons");
-  config.addPassthroughCopy("src/fonts");
-  config.addPassthroughCopy("src/images");
-  config.addPassthroughCopy("src/static");
-  config.addPassthroughCopy('src/robots.txt');
-  config.addPassthroughCopy('src/admin/config.yml');
-  config.addPassthroughCopy('src/admin/previews.js');
-  config.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');
-  
+  eleventyConfig.addPassthroughCopy("src/icons");
+  eleventyConfig.addPassthroughCopy("src/fonts");
+  eleventyConfig.addPassthroughCopy("src/images");
+  eleventyConfig.addPassthroughCopy("src/static");
+  eleventyConfig.addPassthroughCopy('src/robots.txt');
+  eleventyConfig.addPassthroughCopy('src/admin/eleventyConfig.yml');
+  eleventyConfig.addPassthroughCopy('src/admin/previews.js');
+  eleventyConfig.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');
   // Collection
   const now = new Date();
   const livePosts = post => post.date <= now && !post.data.draft;
-  config.addCollection('posts', collection => {
+  eleventyConfig.addCollection('posts', collection => {
     return [
       ...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts)
     ].reverse();
   });
-  config.addCollection('postFeed', collection => {
+  eleventyConfig.addCollection('postFeed', collection => {
     return [
       ...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts)
     ].reverse().slice(0, site.maxPostsPerPage);
   });
-
   // Plugin
-  config.addPlugin(embedYouTube);
-  config.addPlugin(rssPlugin);
-  config.addPlugin(syntaxHighlight);
-
-   /* Markdown Overrides */
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(markdownShortcode, {
+    html: true,
+    njk: true,
+    linkify: true,
+  });
+  eleventyConfig.addPlugin(embedYouTube);
+  eleventyConfig.addPlugin(rssPlugin);
+  eleventyConfig.addPlugin(syntaxHighlight);
+  /* Markdown Overrides */
    let markdownLibrary = markdownIt({
     html: true,
     breaks: true,
     linkify: true
   })
-  config.setLibrary("md", markdownLibrary);
-
+  eleventyConfig.setLibrary("md", markdownLibrary);
   // BrowserSync
-  config.setBrowserSyncConfig({
+  eleventyConfig.setBrowserSyncConfig({
     callbacks: {
       ready: function (err, browserSync) {
         const content_404 = fs.readFileSync('dist/404.html');
@@ -76,15 +73,14 @@ module.exports = function (config) {
       }
     }
   });
-
   // Filters
-  config.addFilter('dateFilter', dateFilter);
-  config.addFilter('markdownFilter', markdownFilter);
-  config.addFilter('w3DateFilter', w3DateFilter);
-  config.addFilter("cssmin", function (code) {
+  eleventyConfig.addFilter('dateFilter', dateFilter);
+  eleventyConfig.addFilter('markdownFilter', markdownFilter);
+  eleventyConfig.addFilter('w3DateFilter', w3DateFilter);
+  eleventyConfig.addFilter("cssmin", function (code) {
     return new CleanCSS({}).minify(code).styles;
   });
-  config.addFilter("jsmin", function (code) {
+  eleventyConfig.addFilter("jsmin", function (code) {
     let minified = Terser.minify(code);
     if (minified.error) {
       console.log("Terser error: ", minified.error);
@@ -92,28 +88,23 @@ module.exports = function (config) {
     }
     return minified.code;
   });
-
-
-
   // Directories
   return {
     templateFormats: [
       "md",
       "njk",
-      "html"
+      "html",
+      "css",
     ],
     passthroughFileCopy: true,
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "html",
     dataTemplateEngine: "njk",
-
     dir: {
       input: "src",
       output: "dist",
-      data: "_data",
+      data: "_data", 
       includes: "_includes"
     },
-   
   };
-  
 };

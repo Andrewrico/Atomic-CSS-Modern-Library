@@ -5,6 +5,8 @@
 }
 
 :root {
+	--atomic-mode-background: "white";
+	--atomic-mode-color: "black";
 	--atomic-primary: #6495ED;
 	--atomic-secondary: #8A2BE2;
 	--atomic-tertiary: #8FBC8F;

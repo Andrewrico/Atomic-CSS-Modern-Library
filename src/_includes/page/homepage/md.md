@@ -1,4 +1,14 @@
-md file:
+### Content [FILE TITLE]
+
+``` css
+var foo = function (bar) {
+  return bar++;
+};
+
+console.log(foo(5));
+```
+
+
 
 # h1 Heading
 ## h2 Heading
@@ -99,13 +109,7 @@ Sample text here...
 
 Syntax highlighting
 
-``` css
-var foo = function (bar) {
-  return bar++;
-};
 
-console.log(foo(5));
-```
 
 ## Tables
 

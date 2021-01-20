@@ -4,10 +4,11 @@
 <style>
   {{ css | cssmin | safe }}
 </style>
-a
+
 {% set js %}
   {% include "./scripts.js" %}
 {% endset %}
 <script>
   {{ js | jsmin | safe }}
 </script>
+

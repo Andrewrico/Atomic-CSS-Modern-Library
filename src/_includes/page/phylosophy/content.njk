@@ -2,14 +2,13 @@
 {% set pageType = 'Page' %}
 {% block content %}
     <section>
+
       <div class="D(flex) Fp(wrap) Mxw(1024x)">
         <div class="F(colspan)">
           <article>
-            <p class="Fs(2m)">{{ content | safe }}</p>
-            <hr>
-            {% markdown '/src/_includes/page/homepage/introduction.md' %}
-            <hr>
-            {% markdown '/src/_includes/page/homepage/md.md' %}
+            {{ content | safe }}
+            {% markdown '/src/_includes/page/phylosophy/atomic-phylosophy.md' %}
+            {% markdown '/src/_includes/page/phylosophy/whos-atomic-css-for.md' %}
           <article>
         </div>
 

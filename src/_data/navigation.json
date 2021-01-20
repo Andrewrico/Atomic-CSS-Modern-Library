@@ -1,22 +1,7 @@
 {
   "items": [{
-      "text": "Quick Start",
+      "text": "Homepage",
       "url": "/",
-      "external": false
-    },
-    {
-      "text": "Atomic Phylosophy",
-      "url": "/atomic-phylosophy",
-      "external": false
-    },
-    {
-      "text": "Guides",
-      "url": "/guides",
-      "external": false
-    },
-    {
-      "text": "Sheetcheat",
-      "url": "/sheetcheat",
       "external": false
     }
   ]

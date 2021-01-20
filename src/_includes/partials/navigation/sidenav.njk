@@ -1,21 +1,23 @@
-<aside class="Bg(white)">  
-{% if navigation.items %}
+<style>
+[aria-current="page"] {color:var(--atomic-red)!important;}
+</style>
+<aside> 
     <nav>
+    {% set pages = collections.all | eleventyNavigation %}
         <ul>
-        {% for item in navigation.items %}
-            {% set relAttribute = '' %}
-            {% if item.rel %}
-                {% set relAttribute = ' rel="' + item.rel + '"' %}
-            {% endif %}
-            {% set currentAttribute = '' %}
-            {% if page.url == item.url %}
-                {% set currentAttribute = ' aria-current="page"' %}
-            {% endif %}
-            <li>
-                <a  class="Fs(15x)" href="{{ item.url }}"{{ relAttribute | safe }}{{ currentAttribute | safe }}>{{ item.text }}</a>
-            </li>
+        {% for item in pages %}
+        <li>   
+            <a  href="{{ item.url | url }}"
+            {% if item.url == page.url %} 
+                aria-current="page"
+            {% endif %} 
+            >
+            {{ item.title }}
+            </a>
+        </li>
         {% endfor %}
+    
         </ul>
     </nav>
-{% endif %}     
+</ul>
 </aside>

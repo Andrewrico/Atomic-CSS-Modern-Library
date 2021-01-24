@@ -56,12 +56,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
 
   /* Markdown Overrides */
-  //  let markdownLibrary = markdownIt({
-  //   html: true,
-  //   breaks: true,
-  //   linkify: true
-  // })
-  // eleventyConfig.setLibrary("md", markdownLibrary);
+   let markdownLibrary = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true
+  })
+  eleventyConfig.setLibrary("md", markdownLibrary);
 
   // BrowserSync
   eleventyConfig.setBrowserSyncConfig({

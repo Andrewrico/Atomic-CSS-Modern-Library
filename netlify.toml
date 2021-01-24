@@ -2,8 +2,6 @@
   command = "npm run production"
   publish = "dist"
 
-[template]
-  incoming-hooks = ["Contentful"]
 
 [template.environment]
   SECRET_TOKEN = "https://app.netlify.com/start/deploy"

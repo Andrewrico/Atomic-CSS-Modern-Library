@@ -1,7 +1,7 @@
 ---
 layout: "/page/classes/content.njk"
 title: "Utilities Classes"
-description: "Utilities Classes"
+pageDesc: "Utilities Classes"
 keywords: 
   - Utilities Classes
 eleventyNavigation:

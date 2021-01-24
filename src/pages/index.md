@@ -1,7 +1,7 @@
 ---
 layout: "/page/homepage/content.njk"
 title: "Introduction"
-description: "Getting Started"
+pageDesc: "Getting Started"
 keywords: 
   - Getting Started
 eleventyNavigation:

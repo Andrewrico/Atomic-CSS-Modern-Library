@@ -330,7 +330,6 @@
 	.Bg\(lightgray\)    { --atomic-background-color: var(--atomic-lightgray) }
 	.Bg\(black\)        { --atomic-background-color: var(--atomic-black) }
 	.Bg\(white\)        { --atomic-background-color: var(--atomic-white) }
-
 	.Bg\(gray\)\:hv:hover       { --atomic-background-color: var(--atomic-gray) }
 	.Bg\(black\)\:hv:hover      { --atomic-background-color: var(--atomic-black) }
 	.Bg\(white\)\:hv:hover      { --atomic-background-color: var(--atomic-white) }
@@ -362,7 +361,6 @@
 	.C\(darkgray\)     {--atomic-color: var(--atomic-darkgray)}
 	.C\(black\)        {--atomic-color: var(--atomic-black)}
 	.C\(white\)        {--atomic-color: var(--atomic-white)}
-
 	.C\(gray\)\:hv:hover      { --atomic-color: var(--atomic-gray) }
 	.C\(black\)\:hv:hover      { --atomic-color: var(--atomic-black) }
 	.C\(white\)\:hv:hover      { --atomic-color: var(--atomic-white) }

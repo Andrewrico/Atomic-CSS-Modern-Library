@@ -7,6 +7,7 @@ keywords:
 eleventyNavigation:
   key: 'Getting Started'
   url: '/'
+  order: 1
 permalink: "/"
 tags: 
   - homepage

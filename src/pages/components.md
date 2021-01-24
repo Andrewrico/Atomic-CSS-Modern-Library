@@ -7,6 +7,7 @@ keywords:
 eleventyNavigation:
   key: 'Components'
   url: '/components'
+  order: 5
 permalink: "/components/"
 tags: 
   - components

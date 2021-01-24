@@ -7,6 +7,7 @@ keywords:
 eleventyNavigation:
   key: 'Grid System'
   url: '/grid-system'
+  order: 4
 permalink: "/grid-system/"
 tags: 
   - grid-system

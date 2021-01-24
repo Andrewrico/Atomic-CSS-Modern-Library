@@ -7,6 +7,7 @@ keywords:
 eleventyNavigation:
   key: 'Utilities Classes'
   url: '/utilities-classes'
+  order: 3
 permalink: "/utilities-classes/"
 tags: 
   - utilities-classes

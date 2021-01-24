@@ -7,6 +7,7 @@ keywords:
 eleventyNavigation:
   key: 'Atomic Phylosophy'
   url: '/atomic-phylosophy'
+  order: 2
 permalink: "/atomic-phylosophy/"
 tags: 
  - Atomic Phylosophy

@@ -46,11 +46,7 @@ module.exports = function (eleventyConfig) {
   });
   // Plugin
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addPlugin(markdownShortcode, {
-    html: true,
-    njk: true,
-    linkify: true,
-  });
+  eleventyConfig.addPlugin(markdownShortcode);
   eleventyConfig.addPlugin(embedYouTube);
   eleventyConfig.addPlugin(rssPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);

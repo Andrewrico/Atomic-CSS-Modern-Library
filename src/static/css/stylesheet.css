@@ -1,59 +1,57 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+@import 'atomic.css';
+@import 'grid.css';
+@import 'flexbox.css';
+@import 'custom.css';
 
 :root {
-
-    	/*Light Theme*/
-        --light-primary: #592261;
-        --light-secondary: #8A2BE2;
-        --light-tertiary: #8FBC8F;
-        --light-orange:  #d55e49;
-        --light-red: #B22222;
-        --light-maroon:#800000;
-        --light-yellow: #FFD700;
-        --light-lime: #66FF33; 
-        --light-green: #009900; 
-        --light-cyan:#66FFFF;
-        --light-blue: #0099FF ;
-        --light-indigo: #330066;
-        --light-violet: #EE82EE;
-        --light-lavender: #CC00CC;
-        --light-purple:#800080;
-        --light-pink:#FFC0CB;
-        --light-lightgray: #f5f5f5;
-        --light-gray: #C0C0C0;
-        --light-darkgray:#708090;
-        --light-dark: #2e353c;
-        --light-light: #f7f7f7;
-        --light-white: white;
-        --light-black: black;
-        /*Dark Theme*/
-        --dark-primary: #df19fe;
-        --dark-secondary: #8000f9;
-        --dark-tertiary: #8FBC8F;
-        --dark-orange: #f22400;
-        --dark-red: #da1a1a;
-        --dark-maroon:#800000;
-        --dark-yellow: #FFD700;
-        --dark-lime: #66FF33; 
-        --dark-green: #009900; 
-        --dark-cyan:#66FFFF;
-        --dark-blue: #0099FF ;
-        --dark-indigo: #330066;
-        --dark-violet: #EE82EE;
-        --dark-lavender: #CC00CC;
-        --dark-purple:#800080;
-        --dark-pink:#FFC0CB;
-        --dark-lightgray: #f5f5f5;
-        --dark-gray: #e3e3e3;
-        --dark-darkgray:#b7c5d3;
-        --dark-dark: #566363;
-        --dark-light: #f7f7f7;
-        --dark-white: black;
-        --dark-black: white;
+    /*Light Theme*/
+    --light-primary: #592261;
+    --light-secondary: #8A2BE2;
+    --light-tertiary: #8FBC8F;
+    --light-orange:  #d55e49;
+    --light-red: #B22222;
+    --light-maroon:#800000;
+    --light-yellow: #FFD700;
+    --light-lime: #66FF33; 
+    --light-green: #009900; 
+    --light-cyan:#66FFFF;
+    --light-blue: #0099FF ;
+    --light-indigo: #330066;
+    --light-violet: #EE82EE;
+    --light-lavender: #CC00CC;
+    --light-purple:#800080;
+    --light-pink:#FFC0CB;
+    --light-lightgray: #f5f5f5;
+    --light-gray: #C0C0C0;
+    --light-darkgray:#708090;
+    --light-dark: #2e353c;
+    --light-light: #f7f7f7;
+    --light-white: white;
+    --light-black: black;
+    /*Dark Theme*/
+    --dark-primary: #df19fe;
+    --dark-secondary: #8000f9;
+    --dark-tertiary: #8FBC8F;
+    --dark-orange: #f22400;
+    --dark-red: #da1a1a;
+    --dark-maroon:#800000;
+    --dark-yellow: #FFD700;
+    --dark-lime: #66FF33; 
+    --dark-green: #009900; 
+    --dark-cyan:#66FFFF;
+    --dark-blue: #0099FF ;
+    --dark-indigo: #330066;
+    --dark-violet: #EE82EE;
+    --dark-lavender: #CC00CC;
+    --dark-purple:#800080;
+    --dark-pink:#FFC0CB;
+    --dark-lightgray: #f5f5f5;
+    --dark-gray: #e3e3e3;
+    --dark-darkgray:#b7c5d3;
+    --dark-dark: #566363;
+    --dark-light: #f7f7f7;
+    --dark-white: black;
+    --dark-black: white;
 }
 
 html {
@@ -69,28 +67,30 @@ html {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-main{
-    outline: 0;
-    padding: 1rem;
-}
 
 body {
     backface-visibility: hidden;
     background: var(--atomic-white);
     color: var(--atomic-black);
     margin: 0;
-
 }
 
-img {
-    display: block;
-    height: auto;
-    max-width: 100%;
+main {
+    outline: 0;
+    padding: 1rem;
+}
+
+h1 {
+    text-transform: uppercase;
 }
 
 h2 {
     padding-top: 1rem;
     border-top: 0.8px solid rgba(221, 221, 221, 0.701);
+}
+
+h2, h3, h4, h5, h6 {
+    text-transform: capitalize;
 }
 
 p {
@@ -104,6 +104,12 @@ a {
 a:hover {
     text-decoration: none;
     opacity: 0.9;
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
 }
 
 nav a {
@@ -139,40 +145,6 @@ hr {
     border: 0.4px solid rgba(221, 221, 221, 0.509);
 }
 
-.console {
-    border:0.5px solid #dee2e6;
-}
-
-.console_pre {
-    color: var(--atomic-dark);
-    background: #f8f9fa;
-    display: flex;
-    justify-content:flex-start ;
-    align-items: center;
-    flex-direction: column;
-    font-size: 14px;
-    max-width:  600px;
-    width: 100%;
-    margin: auto;
-}
-.console_header {
-    width: 100%;
-    margin: 0;
-    padding:8px;
-    color: var(--atomic-white);
-    background: var(--atomic-darkgray);
-    font-weight: 300;
-    text-transform: uppercase;
-}
-.console_html{
-    margin-top: 1rem;
-    font-weight: 500;
-    color: #00124b!important;
-}
-
-.console pre {
-    border:0;
-}
 pre {
     color: var(--atomic-dark);
     background: #f8f9fa;
@@ -187,100 +159,6 @@ pre {
     overflow-x: auto;
     max-width:  600px;
     width: 100%;
-    padding: 8px;
     margin: auto;
+    padding: 8px;
 }
-
-h1 {
-    text-transform: uppercase;
-}
-
-h2, h3, h4, h5, h6 {
-    text-transform: capitalize;
-}
-
-
-
-
-
-.Bxs\(1\) {
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-
-.\(center\) {
-    display: var(--atomic-grid);
-    place-items: var(--atomic-center);
-    justify-content: var(--atomic-center);
-    align-items: var(--atomic-center);
-    text-align: var(--atomic-center);
-    margin: var(--atomic-auto);
-}
-
-.F\(c\) {
-    display: var(--atomic-flex);
-    justify-content: var(--atomic-center);
-    align-items: var(--atomic-center);
-}
-
-.F\(sb\) {
-    display: var(--atomic-flex);
-    justify-content: var(--atomic-space-between);
-    align-items: var(--atomic-center);
-}
-
-.F\(sa\) {
-    display: var(--atomic-flex);
-    justify-content: var(--atomic-space-around);
-    align-items: var(--atomic-center);
-}
-
-.G\(c\) {
-    display: var(--atomic-grid);
-    place-items: var(--atomic-center);
-}
-
-.F\(row\) {
-    padding: var(--atomic-0) var(--atomic-1rem);
-    display: var(--atomic-flex);
-    flex-direction: var(--atomic-column);
-    flex-wrap: var(--atomic-wrap);
-    width: var(--atomic-100pct)
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.radio-tab-toggle{
-    margin: -1px;
-    padding: 0;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    clip: rect(0, 0, 0, 0);
-    position: absolute;
-  }
-  
-  .radio-tab-toggle + div {
-    height: 0;
-    overflow: hidden;
-  }
-  
-  .radio-tab-toggle:checked + div {
-    height: auto;
-  }

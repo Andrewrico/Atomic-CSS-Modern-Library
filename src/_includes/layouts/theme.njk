@@ -4,10 +4,10 @@
 
 </head>
 <body>
-    <div class="mxw(1268x) grid sidebar cols(menubar) gap(0) w(100%) P(1m)">
+    <div class="grid sidebar cols(menubar) gap(0) W(100%) Mxw(1268x) P(1m)">
         {% include "partials/header/header.njk" %}
         {% include "partials/navigation/sidenav.njk" %}
-        <main id="main-content" tabindex="-1"  style="border-top: #dddd solid 1px;"> 
+        <main class="Bdt(gray)" id="main-content" tabindex="-1"> 
             <h1 class="C(primary)"> {{ title }} </h1>
             {% block content %}{% endblock content %}
         </main>

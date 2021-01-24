@@ -1,4 +1,4 @@
-<footer class="col(-1)" style="border-top: #dddd solid 1px;">
+<footer class="col(-1) Bdt(gray)">
     <div class="G(c) H(100%)">
         <small class="Pt(1r) Pb(1r)"> © <span id="currentYear"></span> Copyright {{ site.name }}. All Rights Reserved</small>
     </div>
@@ -12,8 +12,9 @@ background="var(--atomic-primary)"></el-loading>
 
 <script src="/static/js/app.js" defer></script>
 
-{# {% include "src/_includes/inline/scripts.njk" %}  #}
+<script src="/static/js/thisel.js" defer></script>
 
+{# {% include "src/_includes/inline/scripts.njk" %}  #}
 
 {# 
 {% include "src/_includes/partials/scripts.njk" %} 
@@ -25,14 +26,14 @@ background="var(--atomic-primary)"></el-loading>
 
   
 <!-- Service-Worker -->
-{# <script>
+<script>
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
     navigator.serviceWorker.register('/service-worker.js');
     });
 }
-</script> #}
+</script>
 
 <!-- netlify-identity -->
-{# <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async defer></script> #}
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async defer></script>
 

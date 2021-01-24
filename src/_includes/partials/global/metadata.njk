@@ -2,25 +2,21 @@
 {% set pageDesc = '' %}
 {% set siteTitle = site.name %}
 {% set currentUrl = site.url + page.url %}
-
 {% if metaDesc %}
   {% set pageDesc = metaDesc %}
 {% endif %}
 
-
+<!-- Must -->
 <title>{{ pageTitle }}</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 
+<!-- Social Meta  -->
 <meta property="og:site_name" content="{{ siteTitle }}" />
 <meta property="og:title" content="{{ pageTitle }}" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ currentUrl }}" />
-
-{% if site.authorHandle %}
-  <meta name="twitter:creator" content="@{{ site.authorHandle | replace('@', '') }}" />
-{% endif %}
 
 {% if metaDesc %}
   <meta name="description" content="{{ metaDesc }}" />
@@ -35,6 +31,7 @@
   <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
 {% endif %}
 
-<link rel="canonical" href="{{ currentUrl }}" />
-<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml"/>
-<link rel="icon" href="{{ site.faviconPath }}" type="image/png"/>
+{# {% if site.authorHandle %}
+  <meta name="twitter:creator" content="@{{ site.authorHandle | replace('@', '') }}" />
+{% endif %} #}
+

@@ -17,10 +17,10 @@
           <nav class="P(1m)" style="position:sticky;top:0;" aria-label="Secondary Menu"> 
             <h3>Table of Content</h3>
             <ul>
-            {% for item in navigation.items %}
+            {% for components in indexing.components %}
                 <li>
                     <a class="Fs(14x)"
-                    href="{{ item.url }}"}>{{ item.text }}</a>
+                    href="{{ components.url }}"}>{{ components.text }}</a>
                 </li>
             {% endfor %}
             </ul>

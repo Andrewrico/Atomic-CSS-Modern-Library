@@ -13,11 +13,7 @@ const EXCLUDED_URLS = [
 
 // URLS that we want to be cached when the worker is installed  
 const PRE_CACHE_URLS = [
-  '/', 
-  '/static/js/app.js',
-  '/static/css/stylesheet.css',
-  '/fonts/OpenSans-Regular.ttf',
-  '/fonts/ArchivoBlack-Regular.ttf',
+  '/'
 ];
 
 // You might want to bypass a certain host

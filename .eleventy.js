@@ -54,13 +54,15 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(embedYouTube);
   eleventyConfig.addPlugin(rssPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
+
   /* Markdown Overrides */
-   let markdownLibrary = markdownIt({
-    html: true,
-    breaks: true,
-    linkify: true
-  })
-  eleventyConfig.setLibrary("md", markdownLibrary);
+  //  let markdownLibrary = markdownIt({
+  //   html: true,
+  //   breaks: true,
+  //   linkify: true
+  // })
+  // eleventyConfig.setLibrary("md", markdownLibrary);
+
   // BrowserSync
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {

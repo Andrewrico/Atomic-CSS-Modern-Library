@@ -12,21 +12,19 @@
             {% markdown '/src/_includes/page/homepage/md.md' %}
           <article>
         </div>
-
         <div class="F(column)">
           <nav class="P(1m)" style="position:sticky;top:0;" aria-label="Secondary Menu"> 
             <h3>Table of Content</h3>
             <ul>
-            {% for item in navigation.items %}
+            {% for classes in indexing.classes %}
                 <li>
                     <a class="Fs(14x)"
-                    href="{{ item.url }}"}>{{ item.text }}</a>
+                    href="{{ classes.url }}"}>{{ classes.text }}</a>
                 </li>
             {% endfor %}
             </ul>
           </nav>
         </div>
-
       </div>
     </section>
 {% include "./assets.njk" %} 

@@ -2,13 +2,14 @@
 {% set pageType = 'Page' %}
 {% block content %}
     <section>
-
       <div class="D(flex) Fp(wrap) Mxw(1024x)">
         <div class="F(colspan)">
           <article>
-            {{ content | safe }}
-            {% markdown '/src/_includes/page/phylosophy/phylosophy.md' %}
-            {% markdown '/src/_includes/page/phylosophy/whos-atomic-css-for.md' %}
+            <p class="Fs(2m)">{{ content | safe }}</p>
+            <hr>
+            {% markdown '/src/_includes/page/homepage/introduction.md' %}
+            <hr>
+            {% markdown '/src/_includes/page/homepage/md.md' %}
           <article>
         </div>
 
@@ -16,10 +17,10 @@
           <nav class="P(1m)" style="position:sticky;top:0;" aria-label="Secondary Menu"> 
             <h3>Table of Content</h3>
             <ul>
-            {% for phylosophy in indexing.phylosophy %}
+            {% for grid in indexing.grid %}
                 <li>
                     <a class="Fs(14x)"
-                    href="{{ phylosophy.url }}"}>{{ phylosophy.text }}</a>
+                    href="{{ grid.url }}"}>{{ grid.text }}</a>
                 </li>
             {% endfor %}
             </ul>

@@ -610,6 +610,15 @@
 [class*="H("] 			{ height: var(--atomic-height) }
 	.H\(0\)         	{ --atomic-height:var(--atomic-0) }
 	.H\(a\)         	{ --atomic-height:var(--atomic-auto) }
+	.H\(0\)				{ --atomic-height: var(--atomic-0) }
+	.H\(2x\) 			{ --atomic-height: var(--atomic-2px) }
+	.H\(4x\) 			{ --atomic-height: var(--atomic-4px) }
+	.H\(8x\) 			{ --atomic-height: var(--atomic-8px) }
+	.H\(16x\) 			{ --atomic-height: var(--atomic-16px) }
+	.H\(24x\) 			{ --atomic-height: var(--atomic-24px) }
+	.H\(32x\) 			{ --atomic-height: var(--atomic-32px) }
+	.H\(48x\) 			{ --atomic-height: var(--atomic-48px) }
+	.H\(56x\) 			{ --atomic-height: var(--atomic-56px) }
 	.H\(100vh\)         { --atomic-height:var(--atomic-100vh) }
 	.H\(100\%\)         { --atomic-height:var(--atomic-100pct) }
 

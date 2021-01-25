@@ -26,13 +26,13 @@ background="var(--atomic-primary)"></el-loading>
 
   
 <!-- Service-Worker -->
-<script>
+{# <script>
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
     navigator.serviceWorker.register('/service-worker.js');
     });
 }
-</script>
+</script> #}
 
 <!-- netlify-identity -->
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async defer></script>

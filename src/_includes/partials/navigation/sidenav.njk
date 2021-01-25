@@ -1,19 +1,27 @@
 <aside> 
-    <nav>
     {% set pages = collections.all | eleventyNavigation %}
-        <ul>
+    <nav role="primary-navigation">
+        <label id="burger" for="toggle">
+            <?xml version="1.0" encoding="iso-8859-1"?>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 384 384" style="enable-background:new 0 0 384 384;" xml:space="preserve" width="24" height="24">
+                <rect x="0" y="277.333" width="384" height="42.667"/>
+                <rect x="0" y="170.667" width="384" height="42.667"/>
+                <rect x="0" y="64" width="384" height="42.667"/>
+            </svg>
+        </label>
+        <input name="toggle" id="toggle" type="checkbox" hidden />
+        <ul id="menu">
         {% for item in pages %}
-        <li>   
-            <a  href="{{ item.url | url }}"
-            {% if item.url == page.url %} 
-                aria-current="page"
-            {% endif %} 
-            >
-            {{ item.title }}
-            </a>
-        </li>
+            <li>   
+                <a  href="{{ item.url | url }}"
+                {% if item.url == page.url %} 
+                    aria-current="page"
+                {% endif %} 
+                >
+                {{ item.title }}
+                </a>
+            </li>
         {% endfor %}
         </ul>
     </nav>
-</ul>
 </aside>

@@ -2,8 +2,8 @@
     
     "layout": "/page/page/content.njk",
 
-    "_page_has_animatedcss_": "/static/css/animated.css",
+    "animatedIsAvailable": "/static/css/animated.css",
     
-    "_page_has_jquery_": "/static/js/jquery.js" 
+    "jqueryIsAvailable": "/static/js/jquery.js" 
 
 }

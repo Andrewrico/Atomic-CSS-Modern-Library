@@ -6,11 +6,13 @@
   {% set pageDesc = metaDesc %}
 {% endif %}
 
+
 <!-- Must -->
 <title>{{ pageTitle }}</title>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="{{ keywords }}" />
 
 <!-- Social Meta  -->
 <meta property="og:site_name" content="{{ siteTitle }}" />
@@ -34,4 +36,18 @@
 {# {% if site.authorHandle %}
   <meta name="twitter:creator" content="@{{ site.authorHandle | replace('@', '') }}" />
 {% endif %} #}
+
+  <link rel="icon" href="{{ site.faviconPath }}" type="image/png" />
+  <link rel="canonical" href="{{ currentUrl }}" />
+  <link rel="alternate" href="{{ site.url }}/feed.xml" type="application/rss+xml" title="{{ site.title }}"/>
+
+  {#  animated Is Available #}
+  {% if animatedIsAvailable %}
+      <link rel="stylesheet" href="{{ animatedIsAvailable }}" type="text/css">
+  {% endif %}
+  {#  jquery Is Available #}
+  {% if jqueryIsAvailable %}
+      <script src="{{ jqueryIsAvailable }}"></script>
+  {% endif %}
+
 

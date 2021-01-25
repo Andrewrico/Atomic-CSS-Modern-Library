@@ -3,9 +3,7 @@
     {% include "partials/global/metadata.njk" %}
     {% block head %}{% endblock %}
     <!-- Site Assets  -->
-    <link rel="icon" href="{{ site.faviconPath }}" type="image/png"/>
-    <link rel="canonical" href="{{ currentUrl }}" />
-    <link rel="alternate" href="{{ site.url }}/feed.xml" type="application/rss+xml" title="{{ site.title }}"/>
+
     {#  Main Entry Point For CSS #}
     <link rel="preload" href="/static/css/stylesheet.css" as="style">
     <link rel="stylesheet" href="/static/css/stylesheet.css">
@@ -13,15 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    {#  animated Is Available #}
-    {% if animatedIsAvailable %}
-        <link rel="stylesheet" href="{{ animatedIsAvailable }}" type="text/css">
-    {% endif %}
-    {#  jquery Is Available #}
-    {% if jqueryIsAvailable %}
-        <script src="{{ jqueryIsAvailable }}"></script>
-    {% endif %}
-
+  
     {#  Inline Styles #}
     {# {% include "src/_includes/inline/styles.njk" %}  #}
     {# {% include "src/_includes/partials/styles.njk" %}  #}

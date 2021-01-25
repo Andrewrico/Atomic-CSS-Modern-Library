@@ -1,7 +1,7 @@
 ---
 layout: "/page/phylosophy/content.njk"
 title: "Atomic Phylosophy"
-pageDesc: "Atomic Phylosophy"
+metaDesc: "Atomic Phylosophy"
 keywords: 
   - Atomic Phylosophy
 eleventyNavigation:

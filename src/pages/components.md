@@ -1,7 +1,7 @@
 ---
 layout: "/page/components/content.njk"
 title: "Components"
-pageDesc: "Components"
+metaDesc: "Components"
 keywords: 
   - components
 eleventyNavigation:

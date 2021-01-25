@@ -1,7 +1,7 @@
 ---
 layout: "/page/grid/content.njk"
 title: "GRID SYSTEM"
-pageDesc: "Grid System"
+metaDesc: "Grid System"
 keywords: 
   - Grid System
 eleventyNavigation:

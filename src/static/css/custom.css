@@ -1,3 +1,7 @@
+header > div {
+    padding: 0rem 8px;
+}
+
 c {
     color: var(--atomic-maroon, var(--color-maroon, maroon))
 }
@@ -101,7 +105,7 @@ c {
     align-items: center;
     flex-direction: column;
     font-size: 14px;
-    max-width: 600px;
+    /* max-width: 600px; */
     width: 100%;
     margin: auto;
 }
@@ -120,7 +124,7 @@ c {
     margin-top: 1rem;
     font-weight: 500;
     color: #00124b !important;
-    max-width: 600px;
+    /* max-width: 600px; */
     width: 100%;
     margin: auto;
 }
@@ -148,36 +152,32 @@ c {
 
 .radio-tab-toggle:checked+div {
     height: auto;
-} */
+} 
 
 
 /* aside {
     position: absolute;
 }
-nav {
-    height: 2rem;
-    background: #ffffff;
-    position: relative;
-} */
-/* nav[role="navigation"],
-nav[role="navigation"] ul
-{
-    height:auto; 
-    min-height:auto; 
-} */
 
-/* nav[role="navigation"] ul {
-    height: auto;
-    min-height: auto;
-}
- */
+*/
 
-header > div {
-    padding: 0rem 8px;
-}
+
 
 nav[role="primary-navigation"] {
     padding: 0rem 1rem;
+}
+
+@media(min-width:1268px) {
+    nav[role="primary-navigation"] {
+        padding: 0rem;
+    }
+}
+
+
+#burger {
+    margin-left: 1rem;
+    display: flex;
+    cursor: pointer;
 }
 
 #menu li {
@@ -202,13 +202,20 @@ nav[role="primary-navigation"] {
     opacity: 1;
     animation: sweep .3s ease-in-out;
 }
-
-#burger {
-    position: absolute;
-    margin-left: auto;
-    cursor: pointer;
-    right: 8px;
-    top:20px;
+@media(min-width:1024px) {
+    #menu {
+        height: 100%;
+        animation: sweepHeight .3s ease-in-out;
+    } 
+    #menu li {
+        display: block;
+        margin-left: 0px;
+        opacity: 1;
+        animation: sweep .3s ease-in-out;
+    }
+    #burger {
+        display: none;
+    }
 }
 
 @keyframes sweep {

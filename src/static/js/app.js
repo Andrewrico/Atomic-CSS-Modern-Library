@@ -71,32 +71,32 @@ const themePreference = () => {
 
 
 
-// window.addEventListener('load', (event) => {
-// 	let tags = {
-// 		html: ["html"],
-// 		body: ["body"],
-// 		section: ["section"],
-// 		div: ["div"],
-// 		span: ["span"],
-// 		img: ["img"],
-// 		a: 	 ["a"],
-// 		i: 	 ["i"],
-// 		p: 	 ["p"],
-// 		h1:  ["h6"],
-// 		h2:  ["h2"],
-// 		h3:  ["h3"],
-// 		h4:  ["h4"],
-// 		h5:  ["h5"],
-// 		h6:  ["h6"]
-// 	};
-// 	const HTMLtags = document.querySelector('.console_html');
-// 	const keys = Object.keys(tags);
-// 	for (let j = 0; j < keys.length; j++) {
-// 		HTMLtags.innerHTML = HTMLtags.innerHTML.replace( new RegExp("\\b"+keys[j]+"\\b","g"),
-// 		`<c>`+keys[j]+`</c>`)
-// 	}
+window.addEventListener('load', (event) => {
+	let tags = {
+		html: ["html"],
+		body: ["body"],
+		section: ["section"],
+		div: ["div"],
+		span: ["span"],
+		img: ["img"],
+		a: 	 ["a"],
+		i: 	 ["i"],
+		p: 	 ["p"],
+		h1:  ["h6"],
+		h2:  ["h2"],
+		h3:  ["h3"],
+		h4:  ["h4"],
+		h5:  ["h5"],
+		h6:  ["h6"]
+	};
+	const HTMLtags = document.querySelector('.console_html');
+	const keys = Object.keys(tags);
+	for (let j = 0; j < keys.length; j++) {
+		HTMLtags.innerHTML = HTMLtags.innerHTML.replace( new RegExp("\\b"+keys[j]+"\\b","g"),
+		`<c>`+keys[j]+`</c>`)
+	}
 
-// });
+});
 
 
 

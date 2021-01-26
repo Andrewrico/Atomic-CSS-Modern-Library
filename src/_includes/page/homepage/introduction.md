@@ -50,7 +50,7 @@ As in everything, the style code is different for everyone. Some people will pre
 <h4 class="console_header">Output: Card Component</h4>
 
 <div class=" Mt(3m) Mb(3m)">
-    <div class="Bxs(1) Bg(white) P(16x) D(flex) Fd(col) Mnw(350x) W(100)">
+    <div class="Bs(11) Bg(white) P(16x) D(flex) Fd(col) Mnw(350x) W(100)">
         <div class="F(sb)">
             <div class="F(c)">
                 <!-- <img src="/images/placeholder.png" alt="image" width="100"> -->

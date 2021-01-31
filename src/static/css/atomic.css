@@ -294,6 +294,17 @@
 	.Bdl\(secondary\) 	{ --atomic-border-left: var(--atomic-solid-1px) var(--atomic-secondary)}
 	.Bdl\(tertiary\) 	{ --atomic-border-left: var(--atomic-solid-1px) var(--atomic-tertiary)}
 
+[class*="Br("]		    { border-radius: var(--atomic-border-radius)}
+	.Br\(0x\) 			{ --atomic-border-radius: var(--atomic-0px)}
+	.Br\(2x\) 			{ --atomic-border-radius: var(--atomic-2px)}
+	.Br\(4x\) 			{ --atomic-border-radius: var(--atomic-4px)}
+	.Br\(8x\) 			{ --atomic-border-radius: var(--atomic-8px)}
+	.Br\(12x\) 			{ --atomic-border-radius: var(--atomic-12px)}
+	.Br\(1m\) 			{ --atomic-border-radius: var(--atomic-1rem)}
+	.Br\(2m\) 			{ --atomic-border-radius: var(--atomic-2rem)}
+	.Br\(3m\) 			{ --atomic-border-radius: var(--atomic-3rem)}
+	.Br\(4m\) 			{ --atomic-border-radius: var(--atomic-4rem)}
+
 [class*="Bdr("]		    { border-right: var(--atomic-border-right)}
 	.Bdr\(black\) 		{ --atomic-border-right: var(--atomic-solid-1px) var(--atomic-black)}
 	.Bdr\(white\) 		{ --atomic-border-right: var(--atomic-solid-1px) var(--atomic-white)}

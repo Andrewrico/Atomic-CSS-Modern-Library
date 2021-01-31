@@ -1,29 +1,21 @@
 <head>
-    {#  Site Metadata #}
+    {#  metadata #}
     {% include "partials/global/metadata.njk" %}
     {% block head %}{% endblock %}
-    <!-- Site Assets  -->
-
-    {#  Main Entry Point For CSS #}
+    {#  entry point CSS #}
     <link rel="preload" href="/static/css/stylesheet.css" as="style">
-    <link rel="stylesheet" href="/static/css/stylesheet.css">
-    {#  Vendors Assets #}
+    <link rel="stylesheet" media="all" href="/static/css/stylesheet.css">
+    {#  vendors #}
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
-    {#  Inline Styles #}
-    {# {% include "src/_includes/inline/styles.njk" %}  #}
-    {# {% include "src/_includes/partials/styles.njk" %}  #}
-    {#  If Page Has Animated CSS #}
+    {#  inline #}
+    {% include "src/_includes/inline/styles.njk" %} 
+    {% include "src/_includes/partials/styles.njk" %} 
+    {#  manifest #}
     {# <link href="/manifest.json" rel="manifest"> #}
-    {# <link rel="preload" as="font" href="/fonts/OpenSans-Regular.ttf" type="font/ttf">
+    {# local fonts #}
+    {#<link rel="preload" as="font" href="/fonts/OpenSans-Regular.ttf" type="font/ttf">
     <link rel="preload" as="font" href="/fonts/ArchivoBlack-Regular.ttf" type="font/ttf" >
-    <link rel="preload" as="font" href="/fonts/BreeSerif-Regular.ttf" type="font/ttf">
-    <link rel="preload" href="/static/css/stylesheet.css" as="style">
-    <link rel="preload" href="/static/css/grid.css" as="style">
-    <link rel="preload" href="/static/css/atomic.css" as="style">
-    <link rel="stylesheet" type="text/css" media="all" href="/static/css/stylesheet.css"/>
-    <link rel="stylesheet" type="text/css" media="all" href="/static/css/grid.css"/>
-    <link rel="stylesheet" type="text/css" media="all" href="/static/css/atomic.css"/> #}
+    <link rel="preload" as="font" href="/fonts/BreeSerif-Regular.ttf" type="font/ttf">#}
 </head>

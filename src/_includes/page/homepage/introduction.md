@@ -54,20 +54,20 @@ As in everything, the style code is different for everyone. Some people will pre
         <div class="F(sb)">
             <div class="F(c)">
                 <!-- <img src="/images/placeholder.png" alt="image" width="100"> -->
-                <i class="fa fa-twitter P(16x) Bg(white) Bd(black)" aria-hidden="true"></i> 
-                <span>Twitter</span>
+                <i class="fa fa-twitter P(8x) Bg(white) Bd(lightgray) Br(4m) Bs(11) C(blue) Mr(4x)" aria-hidden="true"></i> 
+                <span class="Ff(2) Fs(13x)">Twitter</span>
             </div>
             <div class="">
                 <div class="F(c)">
-                    <span>5.0</span>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-bookmark P(16x) Bg(white) Bd(black)" aria-hidden="true"></i>
+                    <span class="Ff(5) Fs(24x)">5.0</span>
+                    <i class="fa fa-star C(yellow) Mr(4x) Ml(4x)" aria-hidden="true"></i>
+                    <i class="fa fa-bookmark P(8x) Bg(white) Bd(lightgray) Br(4m) Bs(11) C(gray)" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
         <div class="Mt(1m)">
-            <h3 class="C(primary) M(0) Fs(2m)">Web Developer</h3>
-            <p class="C(darkgray) M(0) Fs(12x)">
+            <h3 class="C(primary) M(0) Ff(2) Fs(2m)">Web Developer</h3>
+            <p class="C(black) M(0) Fs(12x)">
                 <i class="fa fa-usd" aria-hidden="true"></i>
                 <span>$60.000 - $75.000</span>.
             </p>

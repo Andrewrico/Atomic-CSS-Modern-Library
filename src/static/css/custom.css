@@ -1,6 +1,4 @@
-header > div {
-    padding: 0rem 8px;
-}
+
 
 c {
     color: var(--atomic-maroon, var(--color-maroon, maroon))
@@ -202,6 +200,19 @@ nav[role="primary-navigation"] {
     opacity: 1;
     animation: sweep .3s ease-in-out;
 }
+
+#iconClose {
+    display: none;
+}
+#toggle-icon:checked ~ #iconClose {
+    display: block;
+}
+
+#toggle-icon:checked ~ #iconOpen {
+    display: none;
+}
+
+
 @media(min-width:1024px) {
     #menu {
         height: 100%;

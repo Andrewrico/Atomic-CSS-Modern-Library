@@ -1,5 +1,7 @@
 (function () {
 'use strict';
+
+
 // Active Nav Item
 // --atomic-currentpage: var(--atomic-primary);
 const path = location.pathname.split('/')[1];
@@ -65,9 +67,6 @@ const themePreference = () => {
 	  }
 	}, false);
   }, false);
-
-
-
 
 
 
